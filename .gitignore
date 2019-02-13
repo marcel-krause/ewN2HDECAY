@@ -1,0 +1,12 @@
+__pycache__/
+*.stackdump
+*.pyc
+*.gch
+LoopTools-*/
+LoopTools-*.tar.gz
+*.o
+*.mod
+*.exe
+*.a
+makefile
+electroweakCorrections.F90
