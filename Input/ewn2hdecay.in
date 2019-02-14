@@ -1,0 +1,131 @@
+SLHAIN   = 1
+SLHAOUT  = 1
+COUPVAR  = 1
+HIGGS    = 5
+OMIT ELW = 1
+OMIT ELW2= 0
+SM4      = 0
+FERMPHOB = 0
+2HDM     = 1
+N2HDM    = 1
+MODEL    = 1
+TGBET    = 1.17639226D0
+MABEG    = 125.D0
+MAEND    = 1000.D0
+NMA      = 1
+********************* hMSSM (MODEL = 10) *********************************
+MHL      = 1.250000e+02
+**************************************************************************
+ALS(MZ)  = 1.18000e-01
+MSBAR(2) = 9.50000e-02
+MCBAR(3) = 0.98600e+00
+MBBAR(MB)= 4.18000e+00
+MT       = 1.73200e+02
+MTAU     = 1.77682e+00
+MMUON    = 1.056583715e-01
+1/ALPHA  = 1.37036e+02
+ALPHAMZ  = 7.754222173973729e-03
+GF       = 1.1663787e-05
+GFCALC   = 0.000000000
+GAMW     = 2.08500e+00
+GAMZ     = 2.49520e+00
+MZ       = 9.11876e+01
+MW       = 8.0385e+01
+VTB      = 9.9910e-01
+VTS      = 4.040e-02
+VTD      = 8.67e-03
+VCB      = 4.12e-02
+VCS      = 9.7344e-01
+VCD      = 2.252e-01
+VUB      = 3.51e-03
+VUS      = 2.2534e-01
+VUD      = 9.7427e-01
+********************* 4TH GENERATION *************************************
+  SCENARIO FOR ELW. CORRECTIONS TO H -> GG (EVERYTHING IN GEV):
+  GG_ELW = 1: MTP = 500    MBP = 450    MNUP = 375    MEP = 450
+  GG_ELW = 2: MBP = MNUP = MEP = 600    MTP = MBP+50*(1+LOG(M_H/115)/5)
+
+GG_ELW   = 1
+MTP      = 500.D0
+MBP      = 450.D0
+MNUP     = 375.D0
+MEP      = 450.D0
+************************** 2 Higgs Doublet Model *************************
+  TYPE: 1 (I), 2 (II), 3 (lepton-specific), 4 (flipped)
+  PARAM: 1 (masses), 2 (lambda_i)
+
+PARAM    = 1
+TYPE     = 1
+RENSCHEM = 7
+REFSCHEM = 5
+********************
+TGBET2HDM= 4.23635D0
+M_12^2   = 28505.5D0
+INSCALE  = 125.09D0
+OUTSCALE = MIN
+******************** PARAM=1:
+ALPHA_H  = 10.D0
+MHL      = 10.D0
+MHH      = 10.D0
+MHA      = 9.02919728D2
+MH+-     = 8.59398112D2
+******************** PARAM=2:
+LAMBDA1  = 0D0
+LAMBDA2  = 0D0
+LAMBDA3  = 0D0
+LAMBDA4  = 0D0
+LAMBDA5  = 0D0
+**************************** N2HDM ***********************************
+*** needs TYPE, TGBET2HDM, M12^2, MHA and MH+- from the 2HDM block ***
+MH1      = 1.25090000D2
+MH2      = 8.17422761D2
+MH3      = 9.76339405D2
+alpha1   = 0.79503834
+alpha2   = 0.13549279
+alpha3   = 1.46729273
+V_SING   = 1.49629673D3
+**************************************************************************
+SUSYSCALE= 1000.D0
+MU       = 1000.D0
+M2       = 1000.D0
+MGLUINO  = 1000.D0
+MSL1     = 1000.D0
+MER1     = 1000.D0
+MQL1     = 1000.D0
+MUR1     = 1000.D0
+MDR1     = 1000.D0
+MSL      = 1000.D0
+MER      = 1000.D0
+MSQ      = 1000.D0
+MUR      = 1000.D0
+MDR      = 1000.D0
+AL       = 1000.D0
+AU       = 1000.D0
+AD       = 1000.D0
+ON-SHELL = 0
+ON-SH-WZ = 0
+IPOLE    = 0
+OFF-SUSY = 0
+INDIDEC  = 0
+NF-GG    = 5
+IGOLD    = 0
+MPLANCK  = 2.4D18
+MGOLD    = 1.D-13
+******************* VARIATION OF HIGGS COUPLINGS *************************
+ELWK     = 0
+CW       = 1.D0
+CZ       = 1.D0
+Ctau     = 1.D0
+Cmu      = 1.D0
+Ct       = 1.D0
+Cb       = 1.D0
+Cc       = 1.D0
+Cs       = 1.D0
+Cgaga    = 0.D0
+Cgg      = 0.D0
+CZga     = 0.D0
+********************* 4TH GENERATION *************************************
+Ctp      = 1.D0
+Cbp      = 1.D0
+Cnup     = 1.D0
+Cep      = 1.D0

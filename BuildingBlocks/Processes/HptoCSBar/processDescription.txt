@@ -1,0 +1,5 @@
+H+ -> sbar c
+MHp,MC,MS
+1
+55
+1

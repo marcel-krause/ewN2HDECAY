@@ -1,0 +1,5 @@
+H3 -> tau tau
+MH3,ML,ML
+1
+27
+1

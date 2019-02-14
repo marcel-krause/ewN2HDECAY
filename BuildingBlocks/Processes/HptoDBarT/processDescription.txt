@@ -1,0 +1,5 @@
+H+ -> dbar t
+MHp,MD,MT
+1
+60
+1

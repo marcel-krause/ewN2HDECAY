@@ -1,0 +1,5 @@
+A -> tau,tau
+MA0,ML,ML
+1
+42
+1

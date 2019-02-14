@@ -1,0 +1,240 @@
+double complex function SelfA0A0Alter(x)
+ use constants
+ implicit none
+#include "looptools.h"
+ double precision, intent(in) :: x
+ integer :: j
+ double complex :: totalAmplitude
+ double complex :: amplitudes(100)
+
+ amplitudes(1) = (-0.03125D0*CS2S2S1S1f2211*A0(MH12))/PI2
+
+ amplitudes(2) = (-0.03125D0*CS2S2S1S1f2222*A0(MH22))/PI2
+
+ amplitudes(3) = (-0.03125D0*CS2S2S1S1f2233*A0(MH32))/PI2
+
+ amplitudes(4) = (-0.03125D0*CS2S2S2S2f2211*A0(MZ2))/PI2
+
+ amplitudes(5) = (-0.03125D0*CS2S2S2S2f2222*A0(MA02))/PI2
+
+ amplitudes(6) = (-0.0625D0*CS2S2S3S3f2211*A0(MW2))/PI2
+
+ amplitudes(7) = (-0.0625D0*CS2S2S3S3f2222*A0(MHp2))/PI2
+
+ amplitudes(8) = (-0.03125D0*EL2*(CB2 + SB2)*(MZ2 - 2.D0*A0(MZ2))*DBLE((CW2 + SW2)**INT(2.D0)))/(CW2*PI2*SW2)
+
+ amplitudes(9) = (-0.0625D0*EL2*(CB2 + SB2)*(MW2 - 2.D0*A0(MW2)))/(PI2*SW2)
+
+ amplitudes(10) = (-0.125D0*CS2S2S1f221*EL*ME2*YukS1Lep1*A0(ME2))/(MH12*MW*PI2*SW)
+
+ amplitudes(11) = (-0.125D0*CS2S2S1f221*EL*MM2*YukS1Lep1*A0(MM2))/(MH12*MW*PI2*SW)
+
+ amplitudes(12) = (-0.125D0*CS2S2S1f221*EL*ML2*YukS1Lep1*A0(ML2))/(MH12*MW*PI2*SW)
+
+ amplitudes(13) = (-0.125D0*CS2S2S1f222*EL*ME2*YukS1Lep2*A0(ME2))/(MH22*MW*PI2*SW)
+
+ amplitudes(14) = (-0.125D0*CS2S2S1f222*EL*MM2*YukS1Lep2*A0(MM2))/(MH22*MW*PI2*SW)
+
+ amplitudes(15) = (-0.125D0*CS2S2S1f222*EL*ML2*YukS1Lep2*A0(ML2))/(MH22*MW*PI2*SW)
+
+ amplitudes(16) = (-0.125D0*CS2S2S1f223*EL*ME2*YukS1Lep3*A0(ME2))/(MH32*MW*PI2*SW)
+
+ amplitudes(17) = (-0.125D0*CS2S2S1f223*EL*MM2*YukS1Lep3*A0(MM2))/(MH32*MW*PI2*SW)
+
+ amplitudes(18) = (-0.125D0*CS2S2S1f223*EL*ML2*YukS1Lep3*A0(ML2))/(MH32*MW*PI2*SW)
+
+ amplitudes(19) = (-0.375D0*CA2*CS2S2S1f221*EL*MU2*SA1*A0(MU2))/(MH12*MW*PI2*SB*SW)
+
+ amplitudes(20) = (-0.375D0*CA2*CS2S2S1f221*EL*MC2*SA1*A0(MC2))/(MH12*MW*PI2*SB*SW)
+
+ amplitudes(21) = (-0.375D0*CA2*CS2S2S1f221*EL*MT2*SA1*A0(MT2))/(MH12*MW*PI2*SB*SW)
+
+ amplitudes(22) = (-0.375D0*CS2S2S1f222*EL*MU2*(CA1*CA3 - 1.D0*SA1*SA2*SA3)*A0(MU2))/(MH22*MW*PI2*SB*SW)
+
+ amplitudes(23) = (-0.375D0*CS2S2S1f222*EL*MC2*(CA1*CA3 - 1.D0*SA1*SA2*SA3)*A0(MC2))/(MH22*MW*PI2*SB*SW)
+
+ amplitudes(24) = (-0.375D0*CS2S2S1f222*EL*MT2*(CA1*CA3 - 1.D0*SA1*SA2*SA3)*A0(MT2))/(MH22*MW*PI2*SB*SW)
+
+ amplitudes(25) = (-0.375D0*CS2S2S1f223*EL*MU2*(-1.D0*CA3*SA1*SA2 - 1.D0*CA1*SA3)*A0(MU2))/(MH32*MW*PI2*SB*SW)
+
+ amplitudes(26) = (-0.375D0*CS2S2S1f223*EL*MC2*(-1.D0*CA3*SA1*SA2 - 1.D0*CA1*SA3)*A0(MC2))/(MH32*MW*PI2*SB*SW)
+
+ amplitudes(27) = (-0.375D0*CS2S2S1f223*EL*MT2*(-1.D0*CA3*SA1*SA2 - 1.D0*CA1*SA3)*A0(MT2))/(MH32*MW*PI2*SB*SW)
+
+ amplitudes(28) = (-0.375D0*CS2S2S1f221*EL*MD2*YukS1Quark1*A0(MD2))/(MH12*MW*PI2*SW)
+
+ amplitudes(29) = (-0.375D0*CS2S2S1f221*EL*MS2*YukS1Quark1*A0(MS2))/(MH12*MW*PI2*SW)
+
+ amplitudes(30) = (-0.375D0*CS2S2S1f221*EL*MB2*YukS1Quark1*A0(MB2))/(MH12*MW*PI2*SW)
+
+ amplitudes(31) = (-0.375D0*CS2S2S1f222*EL*MD2*YukS1Quark2*A0(MD2))/(MH22*MW*PI2*SW)
+
+ amplitudes(32) = (-0.375D0*CS2S2S1f222*EL*MS2*YukS1Quark2*A0(MS2))/(MH22*MW*PI2*SW)
+
+ amplitudes(33) = (-0.375D0*CS2S2S1f222*EL*MB2*YukS1Quark2*A0(MB2))/(MH22*MW*PI2*SW)
+
+ amplitudes(34) = (-0.375D0*CS2S2S1f223*EL*MD2*YukS1Quark3*A0(MD2))/(MH32*MW*PI2*SW)
+
+ amplitudes(35) = (-0.375D0*CS2S2S1f223*EL*MS2*YukS1Quark3*A0(MS2))/(MH32*MW*PI2*SW)
+
+ amplitudes(36) = (-0.375D0*CS2S2S1f223*EL*MB2*YukS1Quark3*A0(MB2))/(MH32*MW*PI2*SW)
+
+ amplitudes(37) = (-0.03125D0*CS1S1S1f111*CS2S2S1f221*A0(MH12))/(MH12*PI2)
+
+ amplitudes(38) = (-0.03125D0*CS1S1S1f122*CS2S2S1f221*A0(MH22))/(MH12*PI2)
+
+ amplitudes(39) = (-0.03125D0*CS1S1S1f133*CS2S2S1f221*A0(MH32))/(MH12*PI2)
+
+ amplitudes(40) = (-0.03125D0*CS1S1S1f211*CS2S2S1f222*A0(MH12))/(MH22*PI2)
+
+ amplitudes(41) = (-0.03125D0*CS1S1S1f222*CS2S2S1f222*A0(MH22))/(MH22*PI2)
+
+ amplitudes(42) = (-0.03125D0*CS1S1S1f233*CS2S2S1f222*A0(MH32))/(MH22*PI2)
+
+ amplitudes(43) = (-0.03125D0*CS1S1S1f311*CS2S2S1f223*A0(MH12))/(MH32*PI2)
+
+ amplitudes(44) = (-0.03125D0*CS1S1S1f322*CS2S2S1f223*A0(MH22))/(MH32*PI2)
+
+ amplitudes(45) = (-0.03125D0*CS1S1S1f333*CS2S2S1f223*A0(MH32))/(MH32*PI2)
+
+ amplitudes(46) = (-0.03125D0*CS2S2S1f111*CS2S2S1f221*A0(MZ2))/(MH12*PI2)
+
+ amplitudes(47) = (-0.03125D0*A0(MA02)*DBLE(CS2S2S1f221**INT(2.D0)))/(MH12*PI2)
+
+ amplitudes(48) = (-0.03125D0*CS2S2S1f112*CS2S2S1f222*A0(MZ2))/(MH22*PI2)
+
+ amplitudes(49) = (-0.03125D0*A0(MA02)*DBLE(CS2S2S1f222**INT(2.D0)))/(MH22*PI2)
+
+ amplitudes(50) = (-0.03125D0*CS2S2S1f113*CS2S2S1f223*A0(MZ2))/(MH32*PI2)
+
+ amplitudes(51) = (-0.03125D0*A0(MA02)*DBLE(CS2S2S1f223**INT(2.D0)))/(MH32*PI2)
+
+ amplitudes(52) = (-0.0625D0*CS1S3S3f111*CS2S2S1f221*A0(MW2))/(MH12*PI2)
+
+ amplitudes(53) = (-0.0625D0*CS1S3S3f122*CS2S2S1f221*A0(MHp2))/(MH12*PI2)
+
+ amplitudes(54) = (-0.0625D0*CS1S3S3f211*CS2S2S1f222*A0(MW2))/(MH22*PI2)
+
+ amplitudes(55) = (-0.0625D0*CS1S3S3f222*CS2S2S1f222*A0(MHp2))/(MH22*PI2)
+
+ amplitudes(56) = (-0.0625D0*CS1S3S3f311*CS2S2S1f223*A0(MW2))/(MH32*PI2)
+
+ amplitudes(57) = (-0.0625D0*CS1S3S3f322*CS2S2S1f223*A0(MHp2))/(MH32*PI2)
+
+ amplitudes(58) = (-0.015625D0*CS2S2S1f221*EL2*((2.D0*CA1*CA2*CB*MW*SW)/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*A0(MZ2)*DBLE((CW2 + SW2)&
+  &**INT(2.D0)))/(CW2*MH12*PI2*SW2)
+
+ amplitudes(59) = (-0.015625D0*CS2S2S1f222*EL2*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*&
+  &SA1*SA2*SA3)*SB*SW)/EL)*A0(MZ2)* DBLE((CW2 + SW2)**INT(2.D0)))/(CW2*MH22*PI2*SW2)
+
+ amplitudes(60) = (-0.015625D0*CS2S2S1f223*EL2*((2.D0*CB*MW*(-1.D0*CA1*CA3*SA2 + SA1*SA3)*SW)/EL + (2.D0*MW*(-1.D0*CA3*SA1*SA2 - &
+  &1.D0*CA1*SA3)*SB*SW)/EL)*A0(MZ2)* DBLE((CW2 + SW2)**INT(2.D0)))/(CW2*MH32*PI2*SW2)
+
+ amplitudes(61) = (-0.015625D0*CS2S2S1f221*EL2*((2.D0*CA1*CA2*CB*MW*SW)/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*A0(MW2))/(MH12*PI2*SW2)
+
+ amplitudes(62) = (-0.015625D0*CS2S2S1f222*EL2*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*&
+  &SA1*SA2*SA3)*SB*SW)/EL)*A0(MW2))/ (MH22*PI2*SW2)
+
+ amplitudes(63) = (-0.015625D0*CS2S2S1f223*EL2*((2.D0*CB*MW*(-1.D0*CA1*CA3*SA2 + SA1*SA3)*SW)/EL + (2.D0*MW*(-1.D0*CA3*SA1*SA2 - &
+  &1.D0*CA1*SA3)*SB*SW)/EL)*A0(MW2))/ (MH32*PI2*SW2)
+
+ amplitudes(64) = (-0.015625D0*CS2S2S1f221*EL2*((2.D0*CA1*CA2*CB*MW*SW)/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*A0(MW2))/(MH12*PI2*SW2)
+
+ amplitudes(65) = (-0.015625D0*CS2S2S1f222*EL2*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*&
+  &SA1*SA2*SA3)*SB*SW)/EL)*A0(MW2))/ (MH22*PI2*SW2)
+
+ amplitudes(66) = (-0.015625D0*CS2S2S1f223*EL2*((2.D0*CB*MW*(-1.D0*CA1*CA3*SA2 + SA1*SA3)*SW)/EL + (2.D0*MW*(-1.D0*CA3*SA1*SA2 - &
+  &1.D0*CA1*SA3)*SB*SW)/EL)*A0(MW2))/ (MH32*PI2*SW2)
+
+ amplitudes(67) = (-0.03125D0*CS2S2S1f221*EL2*((2.D0*CA1*CA2*CB*MW*SW)/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*(MZ2 - 2.D0*A0(MZ2))*DBLE&
+  &((CW2 + SW2)**INT(2.D0)))/ (CW2*MH12*PI2*SW2)
+
+ amplitudes(68) = (-0.03125D0*CS2S2S1f222*EL2*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*S&
+  &A1*SA2*SA3)*SB*SW)/EL)* (MZ2 - 2.D0*A0(MZ2))*DBLE((CW2 + SW2)**INT(2.D0)))/(CW2*MH22*PI2*SW2)
+
+ amplitudes(69) = (-0.03125D0*CS2S2S1f223*EL2*((2.D0*CB*MW*(-1.D0*CA1*CA3*SA2 + SA1*SA3)*SW)/EL + (2.D0*MW*(-1.D0*CA3*SA1*SA2 - 1&
+  &.D0*CA1*SA3)*SB*SW)/EL)* (MZ2 - 2.D0*A0(MZ2))*DBLE((CW2 + SW2)**INT(2.D0)))/(CW2*MH32*PI2*SW2)
+
+ amplitudes(70) = (-0.0625D0*CS2S2S1f221*EL2*((2.D0*CA1*CA2*CB*MW*SW)/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*(MW2 - 2.D0*A0(MW2)))/(MH1&
+  &2*PI2*SW2)
+
+ amplitudes(71) = (-0.0625D0*CS2S2S1f222*EL2*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*SA&
+  &1*SA2*SA3)*SB*SW)/EL)* (MW2 - 2.D0*A0(MW2)))/(MH22*PI2*SW2)
+
+ amplitudes(72) = (-0.0625D0*CS2S2S1f223*EL2*((2.D0*CB*MW*(-1.D0*CA1*CA3*SA2 + SA1*SA3)*SW)/EL + (2.D0*MW*(-1.D0*CA3*SA1*SA2 - 1.&
+  &D0*CA1*SA3)*SB*SW)/EL)* (MW2 - 2.D0*A0(MW2)))/(MH32*PI2*SW2)
+
+ amplitudes(73) = (-0.03125D0*EL2*ME2*(2.D0*A0(ME2) - 1.D0*x*B0(x, ME2, ME2))*DBLE(YukS2Lep2**INT(2.D0)))/(MW2*PI2*SW2)
+
+ amplitudes(74) = (-0.03125D0*EL2*MM2*(2.D0*A0(MM2) - 1.D0*x*B0(x, MM2, MM2))*DBLE(YukS2Lep2**INT(2.D0)))/(MW2*PI2*SW2)
+
+ amplitudes(75) = (-0.03125D0*EL2*ML2*(2.D0*A0(ML2) - 1.D0*x*B0(x, ML2, ML2))*DBLE(YukS2Lep2**INT(2.D0)))/(MW2*PI2*SW2)
+
+ amplitudes(76) = (-0.09375D0*CB2*EL2*MU2*(2.D0*A0(MU2) - 1.D0*x*B0(x, MU2, MU2)))/(MW2*PI2*SB2*SW2)
+
+ amplitudes(77) = (-0.09375D0*CB2*EL2*MC2*(2.D0*A0(MC2) - 1.D0*x*B0(x, MC2, MC2)))/(MW2*PI2*SB2*SW2)
+
+ amplitudes(78) = (-0.09375D0*CB2*EL2*MT2*(2.D0*A0(MT2) - 1.D0*x*B0(x, MT2, MT2)))/(MW2*PI2*SB2*SW2)
+
+ amplitudes(79) = (-0.09375D0*EL2*MD2*(2.D0*A0(MD2) - 1.D0*x*B0(x, MD2, MD2))*DBLE(YukS2Quark2**INT(2.D0)))/(MW2*PI2*SW2)
+
+ amplitudes(80) = (-0.09375D0*EL2*MS2*(2.D0*A0(MS2) - 1.D0*x*B0(x, MS2, MS2))*DBLE(YukS2Quark2**INT(2.D0)))/(MW2*PI2*SW2)
+
+ amplitudes(81) = (-0.09375D0*EL2*MB2*(2.D0*A0(MB2) - 1.D0*x*B0(x, MB2, MB2))*DBLE(YukS2Quark2**INT(2.D0)))/(MW2*PI2*SW2)
+
+ amplitudes(82) = (0.0625D0*B0(x, MH12, MZ2)*DBLE(CS2S2S1f211**INT(2.D0)))/PI2
+
+ amplitudes(83) = (0.0625D0*B0(x, MH22, MZ2)*DBLE(CS2S2S1f212**INT(2.D0)))/PI2
+
+ amplitudes(84) = (0.0625D0*B0(x, MH32, MZ2)*DBLE(CS2S2S1f213**INT(2.D0)))/PI2
+
+ amplitudes(85) = (0.0625D0*B0(x, MA02, MH12)*DBLE(CS2S2S1f221**INT(2.D0)))/PI2
+
+ amplitudes(86) = (0.0625D0*B0(x, MA02, MH22)*DBLE(CS2S2S1f222**INT(2.D0)))/PI2
+
+ amplitudes(87) = (0.0625D0*B0(x, MA02, MH32)*DBLE(CS2S2S1f223**INT(2.D0)))/PI2
+
+ amplitudes(88) = 0D0
+
+ amplitudes(89) = 0D0
+
+ amplitudes(90) = (0.015625D0*B0(x, MHp2, MW2)*DBLE((-1.D0*CB2 - 1.D0*SB2)**INT(2.D0))*DBLE(((-2.D0*CB2*MW*SW)/EL - (2.D0*MW*SB2*&
+  &SW)/EL)**INT(2.D0))* DBLE(((-0.25D0*EL2*(-1.D0*MA02 + m12squared/(CB*SB)))/(MW2*SW2) + (0.25D0*EL2*(MA02 - 2.D0*MHp2 + m12squa&
+  &red/(CB*SB)))/(MW2*SW2))**INT(2.D0)))/ PI2
+
+ amplitudes(91) = (0.015625D0*B0(x, MHp2, MW2)*DBLE((-1.D0*CB2 - 1.D0*SB2)**INT(2.D0))*DBLE(((-2.D0*CB2*MW*SW)/EL - (2.D0*MW*SB2*&
+  &SW)/EL)**INT(2.D0))* DBLE(((-0.25D0*EL2*(-1.D0*MA02 + m12squared/(CB*SB)))/(MW2*SW2) + (0.25D0*EL2*(MA02 - 2.D0*MHp2 + m12squa&
+  &red/(CB*SB)))/(MW2*SW2))**INT(2.D0)))/ PI2
+
+ amplitudes(92) = 0.D0
+
+ amplitudes(93) = 0.D0
+
+ amplitudes(94) = (-0.015625D0*EL2*(-1.D0*A0(MH12) + 2.D0*A0(MZ2) + (-1.D0*MZ2 + 2.D0*(MH12 + x))*B0(x, MH12, MZ2))*DBLE((CA2*CB*&
+  &SA1 - 1.D0*CA1*CA2*SB)**INT(2.D0))* DBLE((CW2 + SW2)**INT(2.D0)))/(CW2*PI2*SW2)
+
+ amplitudes(95) = (-0.015625D0*EL2*(-1.D0*A0(MH22) + 2.D0*A0(MZ2) + (-1.D0*MZ2 + 2.D0*(MH22 + x))*B0(x, MH22, MZ2))* DBLE((CB*(CA&
+  &1*CA3 - 1.D0*SA1*SA2*SA3) - 1.D0*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SB)**INT(2.D0))*DBLE((CW2 + SW2)**INT(2.D0)))/(CW2*PI2*SW2&
+  &)
+
+ amplitudes(96) = (-0.015625D0*EL2*(-1.D0*A0(MH32) + 2.D0*A0(MZ2) + (-1.D0*MZ2 + 2.D0*(MH32 + x))*B0(x, MH32, MZ2))* DBLE((CB*(-1&
+  &.D0*CA3*SA1*SA2 - 1.D0*CA1*SA3) - 1.D0*(-1.D0*CA1*CA3*SA2 + SA1*SA3)*SB)**INT(2.D0))*DBLE((CW2 + SW2)**INT(2.D0)))/(CW2*PI2*SW&
+  &2)
+
+ amplitudes(97) = 0.D0
+
+ amplitudes(98) = (-0.015625D0*EL2*(-1.D0*A0(MHp2) + 2.D0*A0(MW2) + (-1.D0*MW2 + 2.D0*(MHp2 + x))*B0(x, MHp2, MW2))*DBLE((CB2 + S&
+  &B2)**INT(2.D0)))/(PI2*SW2)
+
+ amplitudes(99) = 0.D0
+
+ amplitudes(100) = (-0.015625D0*EL2*(-1.D0*A0(MHp2) + 2.D0*A0(MW2) + (-1.D0*MW2 + 2.D0*(MHp2 + x))*B0(x, MHp2, MW2))*DBLE((CB2 + &
+  &SB2)**INT(2.D0)))/(PI2*SW2)
+
+  totalAmplitude = (0D0,0D0)
+ do j=1,100
+  totalAmplitude = totalAmplitude + amplitudes(j)
+ end do
+ SelfA0A0Alter = totalAmplitude
+end function SelfA0A0Alter
+
