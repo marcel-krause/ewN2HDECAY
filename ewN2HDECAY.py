@@ -138,7 +138,11 @@ Copyright 2018-2019, Marcel Krause, Milada Margarete Muehlleitner and Michael Sp
 		# TEMP
 		# if os.path.isfile("N2HDECAY" + os.sep + "fermionmasses.dat"):
 		# 	os.remove("N2HDECAY" + os.sep + "fermionmasses.dat")
+		if os.path.isfile("HDECAY" + os.sep + "alphaandbeta.dat"):
+			os.remove("HDECAY" + os.sep + "alphaandbeta.dat")
 		copyfile(filenameIn, filenameOut)
+		with open("HDECAY" + os.sep + "alphaandbeta.dat", 'w') as fileHandler:
+			fileHandler.write(' alpha1 = 0D0\n alpha2 = 0D0\n alpha3 = 0D0\n beta  = 0D0\n')
 		print("... done.\n")
 
 		# Let N2HDECAY run in minimal mode to produce the fermion mass file
@@ -171,7 +175,8 @@ Copyright 2018-2019, Marcel Krause, Milada Margarete Muehlleitner and Michael Sp
 				if (refScheme == 0):
 					print("\nERROR: REFSCHEM=0 is given as input, but REFSCHEM must be greater than zero.")
 					print("ewN2HDECAY will be terminated now (ERROR: REFSCHEM=0 was set).")
-					sys.exit()
+					# TEMP
+					# sys.exit()
 				if (refScheme != 0) and (paramType == 2):
 					convertedFileHandler.append("REFSCHEM = 0\n")
 					print("\nWARNING: REFSCHEM (line 59) is given as a non-zero value, but TYPE=2 (line 57, lambdas as input) is set.")
@@ -270,6 +275,8 @@ Copyright 2018-2019, Marcel Krause, Milada Margarete Muehlleitner and Michael Sp
 		# TEMP
 		# if os.path.isfile("N2HDECAY" + os.sep + "fermionmasses.dat"):
 		# 	os.remove("N2HDECAY" + os.sep + "fermionmasses.dat")
+		if os.path.isfile("N2HDECAY" + os.sep + "alphaandbeta.dat"):
+			os.remove("N2HDECAY" + os.sep + "alphaandbeta.dat")
 
 		print("Corrections for input file " + inputFileTemp + " done.\n")
 
