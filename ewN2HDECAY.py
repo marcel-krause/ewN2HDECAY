@@ -113,7 +113,7 @@ for more details.
 You have received a copy (LICENSE.md) of the GNU General Public License along with this program in the ewN2HDECAY
 root directory.
 
-Copyright 2018-2019, Marcel Krause, Milada Margarete Muehlleitner and Michael Spira.
+Copyright 2018-2019, Marcel Krause and Milada Margarete Muehlleitner.
 	''')
 
 	# Get a list of all input files
@@ -138,10 +138,10 @@ Copyright 2018-2019, Marcel Krause, Milada Margarete Muehlleitner and Michael Sp
 		# TEMP
 		# if os.path.isfile("N2HDECAY" + os.sep + "fermionmasses.dat"):
 		# 	os.remove("N2HDECAY" + os.sep + "fermionmasses.dat")
-		if os.path.isfile("HDECAY" + os.sep + "alphaandbeta.dat"):
-			os.remove("HDECAY" + os.sep + "alphaandbeta.dat")
+		if os.path.isfile("N2HDECAY" + os.sep + "alphaandbeta.dat"):
+			os.remove("N2HDECAY" + os.sep + "alphaandbeta.dat")
 		copyfile(filenameIn, filenameOut)
-		with open("HDECAY" + os.sep + "alphaandbeta.dat", 'w') as fileHandler:
+		with open("N2HDECAY" + os.sep + "alphaandbeta.dat", 'w') as fileHandler:
 			fileHandler.write(' alpha1 = 0D0\n alpha2 = 0D0\n alpha3 = 0D0\n beta  = 0D0\n')
 		print("... done.\n")
 
@@ -308,7 +308,7 @@ for more details.
 You have received a copy (LICENSE.md) of the GNU General Public License along with this program in the ewN2HDECAY
 root directory.
 
-Copyright 2018-2019, Marcel Krause, Milada Margarete Muehlleitner and Michael Spira.
+Copyright 2018-2019, Marcel Krause and Milada Margarete Muehlleitner.
 	''')
 
 	sys.exit()

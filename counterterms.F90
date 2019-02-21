@@ -1725,7 +1725,7 @@ module counterterms
   &*MW*SW)/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*SA1&
   &*SA2*SA3)*SB*SW)/EL)*DBLE(CW**INT(-4.D0))*DBLE(EL**INT(4.D0))*DBLE(SW**INT(-4.D0))*DBLE((CW2 + SW2)**INT(4.D0)))/PI2))/(CA2*(D&
   &BLE(MH1**INT(2.D0)) - 1.D0*DBLE(MH2**INT(2.D0))))&
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dAlpha1MSBarAlter
 
                 double precision function dAlpha2MSBarAlter()
@@ -1893,7 +1893,7 @@ module counterterms
   &/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*SA1*SA2*SA&
   &3)*SB*SW)/EL)*DBLE(CW**INT(-4.D0))*DBLE(EL**INT(4.D0))*DBLE(SW**INT(-4.D0))*DBLE((CW2 + SW2)**INT(4.D0)))/PI2))/(DBLE(MH1**INT&
   &(2.D0)) - 1.D0*DBLE(MH2**INT(2.D0)))&
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dAlpha2MSBarAlter
 
                 double precision function dAlpha3MSBarAlter()
@@ -2147,7 +2147,7 @@ module counterterms
   &0*CA3*SA1*SA2 - 1.D0*CA1*SA3)*SB*SW)/EL)*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*SA1&
   &*SA2*SA3)*SB*SW)/EL)*DBLE(CW**INT(-4.D0))*DBLE(EL**INT(4.D0))*DBLE(SW**INT(-4.D0))*DBLE((CW2 + SW2)**INT(4.D0)))/PI2))/(DBLE(M&
   &H2**INT(2.D0)) - 1.D0*DBLE(MH3**INT(2.D0)))&
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dAlpha3MSBarAlter
 
                 double precision function dBetaMSBarAlter()
@@ -2313,7 +2313,7 @@ module counterterms
   &0.1875D0*CB*CS1S3S3f312*EL*MW*MZ2*SA1*SA3*DBLE(MH3**INT(-2.D0))*DBLE(SW**INT(3.D0)))/(CW2*PI2) + (0.1875D0*CA3*CS1S3S3f312*EL*&
   &MW*MZ2*SA1*SA2*SB*DBLE(MH3**INT(-2.D0))*DBLE(SW**INT(3.D0)))/(CW2*PI2) + (0.1875D0*CA1*CS1S3S3f312*EL*MW*MZ2*SA3*SB*DBLE(MH3**&
   &INT(-2.D0))*DBLE(SW**INT(3.D0)))/(CW2*PI2)))/MHp2&
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dBetaMSBarAlter
 
                 ! double precision function dBetaProcDep1Alter()
@@ -2657,7 +2657,7 @@ module counterterms
   &*MW*SW)/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*SA1&
   &*SA2*SA3)*SB*SW)/EL)*DBLE(CW**INT(-4.D0))*DBLE(EL**INT(4.D0))*DBLE(SW**INT(-4.D0))*DBLE((CW2 + SW2)**INT(4.D0)))/PI2))/(CA2*(D&
   &BLE(MH1**INT(2.D0)) - 1.D0*DBLE(MH2**INT(2.D0)))) &
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dAlpha1MSBarUsual
 
                 double precision function dAlpha2MSBarUsual()
@@ -2911,7 +2911,7 @@ module counterterms
   &/EL + (2.D0*CA2*MW*SA1*SB*SW)/EL)*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*SA1*SA2*SA&
   &3)*SB*SW)/EL)*DBLE(CW**INT(-4.D0))*DBLE(EL**INT(4.D0))*DBLE(SW**INT(-4.D0))*DBLE((CW2 + SW2)**INT(4.D0)))/PI2))/(DBLE(MH1**INT&
   &(2.D0)) - 1.D0*DBLE(MH2**INT(2.D0))) &
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dAlpha2MSBarUsual
 
                 double precision function dAlpha3MSBarUsual()
@@ -3294,7 +3294,7 @@ module counterterms
   &0*CA3*SA1*SA2 - 1.D0*CA1*SA3)*SB*SW)/EL)*((2.D0*CB*MW*(-1.D0*CA3*SA1 - 1.D0*CA1*SA2*SA3)*SW)/EL + (2.D0*MW*(CA1*CA3 - 1.D0*SA1&
   &*SA2*SA3)*SB*SW)/EL)*DBLE(CW**INT(-4.D0))*DBLE(EL**INT(4.D0))*DBLE(SW**INT(-4.D0))*DBLE((CW2 + SW2)**INT(4.D0)))/PI2))/(DBLE(M&
   &H2**INT(2.D0)) - 1.D0*DBLE(MH3**INT(2.D0))) &
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dAlpha3MSBarUsual
 
                 double precision function dBetaMSBarUsual()
@@ -3485,7 +3485,7 @@ module counterterms
   &BLE(SA3**INT(2.D0)))/(PI2*SW2) + (0.03125D0*CB*EL2*MHp2*SB*DBLE(SA1**INT(2.D0))*DBLE(SA2**INT(2.D0))*DBLE(SA3**INT(2.D0)))/(PI&
   &2*SW2) + (0.03125D0*CB*EL2*MW2*SB*DBLE(SA1**INT(2.D0))*DBLE(SA2**INT(2.D0))*DBLE(SA3**INT(2.D0)))/(PI2*SW2) + (0.03125D0*CB*EL&
   &2*SB*DBLE(MH2**INT(2.D0))*DBLE(SA1**INT(2.D0))*DBLE(SA2**INT(2.D0))*DBLE(SA3**INT(2.D0)))/(PI2*SW2)))/MHp2 &
-                        & )*UVDelta
+                        & )*DLOG(1D0/EvalScale**2)
                 end function dBetaMSBarUsual
 
                 ! double precision function dBetaProcDep1Usual()
@@ -3561,7 +3561,7 @@ module counterterms
                         & (CA1*CA2**2*SA1)/(CB*SB)*MH12 + &
                         & (-(CA1*CA3**2*SA1) - CA1**2*CA3*SA2*SA3 + CA3*SA1**2*SA2*SA3 + CA1*SA1*SA2**2*SA3**2)/(CB*SB)*MH22 + &
                         & (CA1*CA3**2*SA1*SA2**2 + CA1**2*CA3*SA2*SA3 - CA3*SA1**2*SA2*SA3 - CA1*SA1*SA3**2)/(CB*SB)*MH32 &
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dm122MSBarUsual
 
                 double precision function dm122MSBarAlter()
@@ -3580,7 +3580,7 @@ module counterterms
                         & (CA1*CA2**2*SA1)/(CB*SB)*MH12 + &
                         & (-(CA1*CA3**2*SA1) - CA1**2*CA3*SA2*SA3 + CA3*SA1**2*SA2*SA3 + CA1*SA1*SA2**2*SA3**2)/(CB*SB)*MH22 + &
                         & (CA1*CA3**2*SA1*SA2**2 + CA1**2*CA3*SA2*SA3 - CA3*SA1**2*SA2*SA3 - CA1*SA1*SA3**2)/(CB*SB)*MH32 &
-                    & )*UVDelta
+                    & )*DLOG(1D0/EvalScale**2)
                 end function dm122MSBarAlter
 
         ! Singlet vev vS
@@ -6315,7 +6315,7 @@ module counterterms
   &0*MH32)*DBLE(YukS1Quark3**INT(2.D0)))/(MW2*PI2*SW2) - (0.09375D0*EL2*MD2*(6.D0*MD2 - 1.D0*MH32)*DBLE(YukS1Quark3**INT(2.D0)))/&
   &(MW2*PI2*SW2) - (0.09375D0*EL2*MS2*(-1.D0*MH32 + 6.D0*MS2)*DBLE(YukS1Quark3**INT(2.D0)))/(MW2*PI2*SW2))))/(MH12*DBLE(RR13**INT&
   &(2.D0)) + MH22*DBLE(RR23**INT(2.D0)) + MH32*DBLE(RR33**INT(2.D0)))&
-                    &)*UVDelta
+                    &)*DLOG(1D0/EvalScale**2)
                 end function dvSMSBarAlter
 
 end module counterterms
