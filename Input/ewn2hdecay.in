@@ -56,13 +56,9 @@ MEP      = 450.D0
 
 PARAM    = 1
 TYPE     = 1
-RENSCHEM = 7
-REFSCHEM = 5
 ********************
 TGBET2HDM= 4.23635D0
 M_12^2   = 28505.5D0
-INSCALE  = 125.09D0
-OUTSCALE = MIN
 ******************** PARAM=1:
 ALPHA_H  = 10.D0
 MHL      = 10.D0
@@ -77,6 +73,10 @@ LAMBDA4  = 0D0
 LAMBDA5  = 0D0
 **************************** N2HDM ***********************************
 *** needs TYPE, TGBET2HDM, M12^2, MHA and MH+- from the 2HDM block ***
+RENSCHEM = 7
+REFSCHEM = 5
+INSCALE  = 125.09D0
+OUTSCALE = MIN
 MH1      = 125.09D0
 MH2      = 381.767D0
 MH3      = 0.01D0

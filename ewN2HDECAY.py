@@ -64,7 +64,7 @@ lineWhereMW = 33        # This is the line at which in the temporary input file 
 lineWhereOSMC = 23      # This is the line at which the OS MC value has to be inserted in the temporary input file
 lineWhereOSMB = 24      # This is the line at which the OS MB value has to be inserted in the temporary input file
 lineWhereParamType = 57 # This is the line at which the parameter type is specified
-lineWhereRefScheme = 60 # This is the line at which the reference renormalization scheme is specified
+lineWhereRefScheme = 77 # This is the line at which the reference renormalization scheme is specified
 
 #----------------------------#
 #        Main Program        #

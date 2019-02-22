@@ -139,12 +139,6 @@ subroutine getParameters(OStype, param2HDMonly)
                 ! Read the 2HDM type
                 read(42, *) dump, dump2, TypeOf2HDM
 
-                ! Read the renormalization scheme
-                read(42, *) dump, dump2, RenormScheme
-
-                ! Read the reference scheme
-                read(42, *) dump, dump2, RefScheme
-
                 ! Skip a line
                 read(42, *)
 
@@ -153,10 +147,6 @@ subroutine getParameters(OStype, param2HDMonly)
                 
                 ! Read m12^2
                 read(42, *) dump, dump2, m12squared
-
-                ! Read the input and output scales
-                read(42, *) dump, dump2, InputScale
-                read(42, *) dump, dump2, OutputScaleReadIn
 
                 ! Skip 4 lines
                 do m = 1, 4, 1
@@ -173,6 +163,16 @@ subroutine getParameters(OStype, param2HDMonly)
                 do m = 1, 8, 1
                     read(42, *)
                 end do
+
+                ! Read the renormalization scheme
+                read(42, *) dump, dump2, RenormScheme
+
+                ! Read the reference scheme
+                read(42, *) dump, dump2, RefScheme
+
+                ! Read the input and output scales
+                read(42, *) dump, dump2, InputScale
+                read(42, *) dump, dump2, OutputScaleReadIn
 
                 ! Read MH1 (relevant if parameter type = 1)
                 read(42, *) dump, dump2, MH1
