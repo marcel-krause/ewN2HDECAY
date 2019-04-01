@@ -1,4 +1,4 @@
-C            Last modification on Feb 21, 2019 by M.M.
+C          Last modification on April 1st, 2019 by M.M.
 C ==================================================================
 C ========================= PROGRAM ewN2HDECAY =====================
 C ==================================================================
@@ -23,7 +23,7 @@ C The paper on the EW correction to the N2HDM decays
 C - M. Krause, D. Lopez-Val, M. Muhlleitner, R. Santos,
 C   JHEP 1712 (2017) 077, arXiv:1708.01578 [hep-ph]
 C
-C  ewN2HDECAY: Last modification on Feb 21, 2019 by M.M.
+C  ewN2HDECAY: Last modification on April 1st, 2019 by M.M.
 C ==================================================================
 C
 C  ewN2HDECAY is obtained by implementing the EW corrections into
@@ -40,9 +40,9 @@ C           Last modification on January 13 2016 by M.S.
 C ==================================================================
 C ================= PROGRAM HDECAY: COMMENTS =======================
 C ==================================================================
-C                       ****************
-C                       * VERSION 6.51 *
-C                       ****************
+C                      *****************
+C                      * VERSION 6.511 *
+C                      *****************
 C
 C
 C  This program calculates the total decay widths and the branching
