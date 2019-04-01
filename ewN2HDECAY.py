@@ -135,9 +135,8 @@ Copyright 2018-2019, Marcel Krause and Milada Margarete Muehlleitner.
 		# Remove any existing input and fermion masses file in N2HDECAY
 		if os.path.isfile(filenameOut):
 			os.remove(filenameOut)
-		# TEMP
-		# if os.path.isfile("N2HDECAY" + os.sep + "fermionmasses.dat"):
-		# 	os.remove("N2HDECAY" + os.sep + "fermionmasses.dat")
+		if os.path.isfile("N2HDECAY" + os.sep + "fermionmasses.dat"):
+			os.remove("N2HDECAY" + os.sep + "fermionmasses.dat")
 		if os.path.isfile("N2HDECAY" + os.sep + "alphaandbeta.dat"):
 			os.remove("N2HDECAY" + os.sep + "alphaandbeta.dat")
 		copyfile(filenameIn, filenameOut)
@@ -175,8 +174,7 @@ Copyright 2018-2019, Marcel Krause and Milada Margarete Muehlleitner.
 				if (refScheme == 0):
 					print("\nERROR: REFSCHEM=0 is given as input, but REFSCHEM must be greater than zero.")
 					print("ewN2HDECAY will be terminated now (ERROR: REFSCHEM=0 was set).")
-					# TEMP
-					# sys.exit()
+					sys.exit()
 				if (refScheme != 0) and (paramType == 2):
 					convertedFileHandler.append("REFSCHEM = 0\n")
 					print("\nWARNING: REFSCHEM (line 59) is given as a non-zero value, but TYPE=2 (line 57, lambdas as input) is set.")
@@ -271,10 +269,9 @@ Copyright 2018-2019, Marcel Krause and Milada Margarete Muehlleitner.
 		copyfile(filenameIn, filenameOut)
 		print("... done.\n")
 
-		# Cleaning 
-		# TEMP
-		# if os.path.isfile("N2HDECAY" + os.sep + "fermionmasses.dat"):
-		# 	os.remove("N2HDECAY" + os.sep + "fermionmasses.dat")
+		# Cleaning
+		if os.path.isfile("N2HDECAY" + os.sep + "fermionmasses.dat"):
+			os.remove("N2HDECAY" + os.sep + "fermionmasses.dat")
 		if os.path.isfile("N2HDECAY" + os.sep + "alphaandbeta.dat"):
 			os.remove("N2HDECAY" + os.sep + "alphaandbeta.dat")
 
