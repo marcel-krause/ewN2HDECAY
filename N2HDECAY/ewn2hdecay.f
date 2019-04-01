@@ -3697,7 +3697,7 @@ c MMM changed 21/2/2019
       endif
       if(in2hdm.ne.1) then
       write(nout,61) 1,'HDECAY      # decay calculator'
-      write(nout,61) 2,'6.42        # version number'
+      write(nout,61) 2,'6.511       # version number'
       endif
 c end MMM changed 21/2/2019
 
