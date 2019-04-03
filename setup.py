@@ -958,6 +958,7 @@ def createElectroweakCorrections():
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\talpha2 = alpha2Scheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\talpha3 = alpha3Scheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tbeta = betaScheme(m)\n')
+		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tvS = vSScheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tcall getParameters(' + str(OStype) + ', 1)\n\n')
 
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\t! Calculate the NLO ingredients\n')
@@ -1013,6 +1014,7 @@ def createElectroweakCorrections():
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\talpha2 = alpha2Scheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\talpha3 = alpha3Scheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tbeta = betaScheme(m)\n')
+		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tvS = vSScheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tcall getParameters(' + str(OStype) + ', 1)\n\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\t! Write the tree-level width to the output file\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\ttreeLevelWidth = 0D0\n')
@@ -1044,6 +1046,7 @@ def createElectroweakCorrections():
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\talpha2 = alpha2Scheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\talpha3 = alpha3Scheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tbeta = betaScheme(m)\n')
+		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tvS = vSScheme(m)\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tcall getParameters(' + str(OStype) + ', 1)\n\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\t! Calculate the NLO ingredients\n')
 		electroweakCorrectionsFile.write('\t\t\t\t\t\t\t\tcall clearcache\n')

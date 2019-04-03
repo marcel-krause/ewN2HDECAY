@@ -11,7 +11,7 @@
 #   Authors:    Marcel Krause (marcel.krause@kit.edu)                                                                             #
 #               Prof. Dr. M. Margarete Muehlleitner (margarete.muehlleitner@kit.edu)                                              #
 #   Version:    1.0.0                                                                                                             #
-#   Date:       30.10.2018                                                                                                        #
+#   Date:       03.04.2019                                                                                                        #
 #   Copyright:  Copyright (C) 2019, Marcel Krause and Milada Margarete Muehlleitner                                               #
 #   License:    GNU General Public License (GNU GPL-3.0-or-later)                                                                 #
 #                                                                                                                                 #
@@ -113,7 +113,7 @@ for more details.
 You have received a copy (LICENSE.md) of the GNU General Public License along with this program in the ewN2HDECAY
 root directory.
 
-Copyright 2018-2019, Marcel Krause and Milada Margarete Muehlleitner.
+Copyright 2019, Marcel Krause and Milada Margarete Muehlleitner.
 	''')
 
 	# Get a list of all input files
@@ -305,7 +305,7 @@ for more details.
 You have received a copy (LICENSE.md) of the GNU General Public License along with this program in the ewN2HDECAY
 root directory.
 
-Copyright 2018-2019, Marcel Krause and Milada Margarete Muehlleitner.
+Copyright 2019, Marcel Krause and Milada Margarete Muehlleitner.
 	''')
 
 	sys.exit()
