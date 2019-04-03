@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
 When you use this program please cite:
 	The manual for ewN2HDECAY:
-	 - M. Krause, M. Muhlleitner, M. Spira, arXiv:1810.00768
+	 - M. Krause, M. Muhlleitner, arXiv:YYMM.XXXXX
 	The manuals for HDECAY and N2HDECAY:
 	 - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448
 	 - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)
@@ -284,7 +284,7 @@ Copyright 2019, Marcel Krause and Milada Margarete Muehlleitner.
 	print('''
 When you use this program please cite:
 	The manual for ewN2HDECAY:
-	 - M. Krause, M. Muhlleitner, M. Spira, arXiv:1810.00768
+	 - M. Krause, M. Muhlleitner, arXiv:YYMM.XXXXX
 	The manuals for HDECAY and N2HDECAY:
 	 - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448
 	 - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)
