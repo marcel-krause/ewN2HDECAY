@@ -681,84 +681,75 @@ c H1 decays
 c         
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph1n2hdmren(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph1n2hdmren(1,1)
-         do i=2,17,1
+         do i=2,10,1
             alph1n2hdmren(1,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph2n2hdmren(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph2n2hdmren(1,1)
-         do i=2,17,1
+         do i=2,10,1
             alph2n2hdmren(1,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph3n2hdmren(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph3n2hdmren(1,1)
-         do i=2,17,1
+         do i=2,10,1
             alph3n2hdmren(1,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)tmptgbet(i)
          enddo
-         do i=1,17,1
+         do i=1,10,1
             TGBETN2HDMREN(1,i)=dtan(tmptgbet(i))
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)ttmptgbet
          TGBETN2HDMREN(1,1)=dtan(ttmptgbet)
-         do i=2,17,1
+         do i=2,10,1
             TGBETN2HDMREN(1,i) = 0.D0
          enddo
       ENDIF
 c      print*,'tgbetn2hdhm',tgbetn2hdmren(1,1)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)vsren(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)vsren(1,1)
-         do i=2,17,1
+         do i=2,10,1
             vsren(1,i) = 0.D0
          enddo
       ENDIF            
-      IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
-            READ(NI,111)am12ren(1,i)
+      READ(NI,111)am12ren(1,1)
+         do i=2,10,1
+            am12ren(1,i) = am12ren(1,1)
          enddo
-      ELSEIF(IRENSCHEME.NE.0) then
-         READ(NI,111)am12ren(1,1)
-         do i=2,17,1
-            AM12REN(1,i) = 0.D0
-         enddo
-      ENDIF
-c      print*,'values',alph1n2hdmren(1,1),alph2n2hdmren(1,1),
-c     .     alph3n2hdmren(1,1),tgbetn2hdmren(1,1),vsren(1,1),
-c     .     am12ren(1,1)
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)hbblor(1,i)
             READ(NI,111)hbbnlo(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)hbblor(1,1)         
          READ(NI,111)hbbnlo(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HBBLOR(1,i) = 0.D0            
             HBBNLO(1,i) = 0.D0
          enddo
@@ -766,14 +757,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HLLLOR(1,i)                        
             READ(NI,111)HLLNLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HLLLOR(1,1)
          READ(NI,111)HLLNLO(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HLLLOR(1,i) = 0.D0            
             HLLNLO(1,i) = 0.D0
          enddo
@@ -781,14 +772,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HMMLOR(1,i)
             READ(NI,111)HMMNLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HMMLOR(1,1)         
          READ(NI,111)HMMNLO(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HMMLOR(1,i) = 0.D0            
             HMMNLO(1,i) = 0.D0
          enddo
@@ -796,14 +787,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HSSLOR(1,i)
             READ(NI,111)HSSNLO(1,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HSSLOR(1,1)
          READ(NI,111)HSSNLO(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HSSLOR(1,i) = 0.D0            
             HSSNLO(1,i) = 0.D0
          enddo
@@ -811,14 +802,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HCCLOR(1,i)            
             READ(NI,111)HCCNLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HCCLOR(1,1)
          READ(NI,111)HCCNLO(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HCCLOR(1,i) = 0.D0            
             HCCNLO(1,i) = 0.D0
          enddo
@@ -826,14 +817,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HTTLOR(1,i)
             READ(NI,111)HTTNLO(1,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HTTLOR(1,1)
          READ(NI,111)HTTNLO(1,1)         
-         do i=2,17,1
+         do i=2,10,1
             HTTLOR(1,i) = 0.D0
             HTTNLO(1,i) = 0.D0            
          enddo
@@ -841,14 +832,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HWWLOR(1,i)
             READ(NI,111)HWWNLO(1,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HWWLOR(1,1)
          READ(NI,111)HWWNLO(1,1)         
-         do i=2,17,1
+         do i=2,10,1
             HWWLOR(1,i) = 0.D0            
             HWWNLO(1,i) = 0.D0
          enddo
@@ -856,14 +847,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HZZLOR(1,i)
             READ(NI,111)HZZNLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HZZLOR(1,1)
          READ(NI,111)HZZNLO(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HZZLOR(1,i) = 0.D0
             HZZNLO(1,i) = 0.D0
          enddo
@@ -871,14 +862,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HAALOR(1,i)            
             READ(NI,111)HAANLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HAALOR(1,1)
          READ(NI,111)HAANLO(1,1)         
-         do i=2,17,1
+         do i=2,10,1
             HAALOR(1,i) = 0.D0
             HAANLO(1,i) = 0.D0            
          enddo
@@ -886,14 +877,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HZALOR(1,i)            
             READ(NI,111)HZANLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HZALOR(1,1)
          READ(NI,111)HZANLO(1,1)         
-         do i=2,17,1
+         do i=2,10,1
             HZALOR(1,i) = 0.D0
             HZANLO(1,i) = 0.D0
          enddo
@@ -901,14 +892,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HHPWMLOR(1,i)
             READ(NI,111)HHPWMNLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HHPWMLOR(1,1)
          READ(NI,111)HHPWMNLO(1,1)         
-         do i=2,17,1
+         do i=2,10,1
             HHPWMLOR(1,i) = 0.D0
             HHPWMNLO(1,i) = 0.D0
          enddo
@@ -916,14 +907,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HHPHMLOR(1,i)
             READ(NI,111)HHPHMNLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HHPHMLOR(1,1)
          READ(NI,111)HHPHMNLO(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HHPHMLOR(1,i) = 0.D0
             HHPHMNLO(1,i) = 0.D0
          enddo
@@ -933,80 +924,74 @@ c H2 decays
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph1n2hdmren(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph1n2hdmren(2,1)
-         do i=2,17,1
+         do i=2,10,1
             alph1n2hdmren(2,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph2n2hdmren(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph2n2hdmren(2,1)
-         do i=2,17,1
+         do i=2,10,1
             alph2n2hdmren(2,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph3n2hdmren(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph3n2hdmren(2,1)
-         do i=2,17,1
+         do i=2,10,1
             alph3n2hdmren(2,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)tmptgbet(i)
          enddo
-         do i=1,17,1
+         do i=1,10,1
             TGBETN2HDMREN(2,i)=dtan(tmptgbet(i))
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)ttmptgbet
          TGBETN2HDMREN(2,1)=dtan(ttmptgbet)
-         do i=2,17,1
+         do i=2,10,1
             TGBETN2HDMREN(2,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)vsren(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)vsren(2,1)
-         do i=2,17,1
+         do i=2,10,1
             vsren(2,i) = 0.D0
          enddo
       ENDIF            
-      IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
-            READ(NI,111)am12ren(2,i)
+      READ(NI,111)am12ren(2,1)
+         do i=2,10,1
+            am12ren(2,i) = am12ren(2,1)
          enddo
-      ELSEIF(IRENSCHEME.NE.0) then
-         READ(NI,111)am12ren(2,1)
-         do i=2,17,1
-            AM12REN(2,i) = 0.D0
-         enddo
-      ENDIF
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)hbblor(2,i)
             READ(NI,111)hbbnlo(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)hbblor(2,1)         
          READ(NI,111)hbbnlo(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HBBLOR(2,i) = 0.D0            
             HBBNLO(2,i) = 0.D0
          enddo
@@ -1014,14 +999,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HLLLOR(2,i)                        
             READ(NI,111)HLLNLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HLLLOR(2,1)
          READ(NI,111)HLLNLO(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HLLLOR(2,i) = 0.D0            
             HLLNLO(2,i) = 0.D0
          enddo
@@ -1029,14 +1014,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HMMLOR(2,i)
             READ(NI,111)HMMNLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HMMLOR(2,1)         
          READ(NI,111)HMMNLO(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HMMLOR(2,i) = 0.D0            
             HMMNLO(2,i) = 0.D0
          enddo
@@ -1044,14 +1029,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HSSLOR(2,i)
             READ(NI,111)HSSNLO(2,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HSSLOR(2,1)
          READ(NI,111)HSSNLO(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HSSLOR(2,i) = 0.D0            
             HSSNLO(2,i) = 0.D0
          enddo
@@ -1059,14 +1044,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HCCLOR(2,i)            
             READ(NI,111)HCCNLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HCCLOR(2,1)
          READ(NI,111)HCCNLO(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HCCLOR(2,i) = 0.D0            
             HCCNLO(2,i) = 0.D0
          enddo
@@ -1074,14 +1059,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HTTLOR(2,i)
             READ(NI,111)HTTNLO(2,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HTTLOR(2,1)
          READ(NI,111)HTTNLO(2,1)         
-         do i=2,17,1
+         do i=2,10,1
             HTTLOR(2,i) = 0.D0
             HTTNLO(2,i) = 0.D0            
          enddo
@@ -1089,14 +1074,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HWWLOR(2,i)
             READ(NI,111)HWWNLO(2,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HWWLOR(2,1)
          READ(NI,111)HWWNLO(2,1)         
-         do i=2,17,1
+         do i=2,10,1
             HWWLOR(2,i) = 0.D0            
             HWWNLO(2,i) = 0.D0
          enddo
@@ -1104,14 +1089,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HZZLOR(2,i)
             READ(NI,111)HZZNLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HZZLOR(2,1)
          READ(NI,111)HZZNLO(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HZZLOR(2,i) = 0.D0
             HZZNLO(2,i) = 0.D0
          enddo
@@ -1119,14 +1104,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)H2HjHkLOR(1,1,i)
             READ(NI,111)H2HjHkNLO(1,1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)H2HjHkLOR(1,1,1)
          READ(NI,111)H2HjHkNLO(1,1,1)
-         do i=2,17,1
+         do i=2,10,1
             H2HjHkLOR(1,1,i) = 0.D0
             H2HjHkNLO(1,1,i) = 0.D0            
          enddo
@@ -1134,14 +1119,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HAALOR(2,i)            
             READ(NI,111)HAANLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HAALOR(2,1)
          READ(NI,111)HAANLO(2,1)         
-         do i=2,17,1
+         do i=2,10,1
             HAALOR(2,i) = 0.D0
             HAANLO(2,i) = 0.D0            
          enddo
@@ -1149,14 +1134,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HZALOR(2,i)            
             READ(NI,111)HZANLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HZALOR(2,1)
          READ(NI,111)HZANLO(2,1)         
-         do i=2,17,1
+         do i=2,10,1
             HZALOR(2,i) = 0.D0
             HZANLO(2,i) = 0.D0
          enddo
@@ -1164,14 +1149,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HHPWMLOR(2,i)
             READ(NI,111)HHPWMNLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HHPWMLOR(2,1)
          READ(NI,111)HHPWMNLO(2,1)         
-         do i=2,17,1
+         do i=2,10,1
             HHPWMLOR(2,i) = 0.D0
             HHPWMNLO(2,i) = 0.D0
          enddo
@@ -1179,14 +1164,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HHPHMLOR(2,i)
             READ(NI,111)HHPHMNLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HHPHMLOR(2,1)
          READ(NI,111)HHPHMNLO(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HHPHMLOR(2,i) = 0.D0
             HHPHMNLO(2,i) = 0.D0
          enddo
@@ -1196,80 +1181,74 @@ c H3 decays
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph1n2hdmren(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph1n2hdmren(3,1)
-         do i=2,17,1
+         do i=2,10,1
             alph1n2hdmren(3,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph2n2hdmren(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph2n2hdmren(3,1)
-         do i=2,17,1
+         do i=2,10,1
             alph2n2hdmren(3,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph3n2hdmren(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph3n2hdmren(3,1)
-         do i=2,17,1
+         do i=2,10,1
             alph3n2hdmren(3,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)tmptgbet(i)
          enddo
-         do i=1,17,1
+         do i=1,10,1
             TGBETN2HDMREN(3,i)=dtan(tmptgbet(i))
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)ttmptgbet
          TGBETN2HDMREN(3,1)=dtan(ttmptgbet)
-         do i=2,17,1
+         do i=2,10,1
             TGBETN2HDMREN(3,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)vsren(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)vsren(3,1)
-         do i=2,17,1
+         do i=2,10,1
             vsren(3,i) = 0.D0
          enddo
       ENDIF            
-      IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
-            READ(NI,111)am12ren(3,i)
+      READ(NI,111)am12ren(3,1)
+         do i=2,10,1
+            am12ren(3,i) = am12ren(3,1)
          enddo
-      ELSEIF(IRENSCHEME.NE.0) then
-         READ(NI,111)am12ren(3,1)
-         do i=2,17,1
-            AM12REN(3,i) = 0.D0
-         enddo
-      ENDIF
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)hbblor(3,i)
             READ(NI,111)hbbnlo(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)hbblor(3,1)         
          READ(NI,111)hbbnlo(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HBBLOR(3,i) = 0.D0            
             HBBNLO(3,i) = 0.D0
          enddo
@@ -1277,14 +1256,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HLLLOR(3,i)                        
             READ(NI,111)HLLNLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HLLLOR(3,1)
          READ(NI,111)HLLNLO(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HLLLOR(3,i) = 0.D0            
             HLLNLO(3,i) = 0.D0
          enddo
@@ -1292,14 +1271,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HMMLOR(3,i)
             READ(NI,111)HMMNLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HMMLOR(3,1)         
          READ(NI,111)HMMNLO(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HMMLOR(3,i) = 0.D0            
             HMMNLO(3,i) = 0.D0
          enddo
@@ -1307,14 +1286,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HSSLOR(3,i)
             READ(NI,111)HSSNLO(3,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HSSLOR(3,1)
          READ(NI,111)HSSNLO(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HSSLOR(3,i) = 0.D0            
             HSSNLO(3,i) = 0.D0
          enddo
@@ -1322,14 +1301,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HCCLOR(3,i)            
             READ(NI,111)HCCNLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HCCLOR(3,1)
          READ(NI,111)HCCNLO(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HCCLOR(3,i) = 0.D0            
             HCCNLO(3,i) = 0.D0
          enddo
@@ -1337,14 +1316,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HTTLOR(3,i)
             READ(NI,111)HTTNLO(3,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HTTLOR(3,1)
          READ(NI,111)HTTNLO(3,1)         
-         do i=2,17,1
+         do i=2,10,1
             HTTLOR(3,i) = 0.D0
             HTTNLO(3,i) = 0.D0            
          enddo
@@ -1352,14 +1331,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HWWLOR(3,i)
             READ(NI,111)HWWNLO(3,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HWWLOR(3,1)
          READ(NI,111)HWWNLO(3,1)         
-         do i=2,17,1
+         do i=2,10,1
             HWWLOR(3,i) = 0.D0            
             HWWNLO(3,i) = 0.D0
          enddo
@@ -1367,14 +1346,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HZZLOR(3,i)
             READ(NI,111)HZZNLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HZZLOR(3,1)
          READ(NI,111)HZZNLO(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HZZLOR(3,i) = 0.D0
             HZZNLO(3,i) = 0.D0
          enddo
@@ -1382,14 +1361,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)H3HjHkLOR(1,1,i)
             READ(NI,111)H3HjHkNLO(1,1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)H3HjHkLOR(1,1,1)
          READ(NI,111)H3HjHkNLO(1,1,1)
-         do i=2,17,1
+         do i=2,10,1
             H3HjHkLOR(1,1,i) = 0.D0
             H3HjHkNLO(1,1,i) = 0.D0            
          enddo
@@ -1397,7 +1376,7 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)H3HjHkLOR(1,2,i)
             READ(NI,111)H3HjHkNLO(1,2,i)
             H3HjHkLOR(2,1,i) = H3HjHkLOR(1,2,i)
@@ -1408,7 +1387,7 @@ c
          READ(NI,111)H3HjHkNLO(1,2,1)
          H3HjHkLOR(2,1,1) = H3HjHkLOR(1,2,1)
          H3HjHkNLO(2,1,1) = H3HjHkNLO(1,2,1)            
-         do i=2,17,1
+         do i=2,10,1
             H3HjHkLOR(1,2,i) = 0.D0
             H3HjHkNLO(1,2,i) = 0.D0
             H3HjHkLOR(2,1,i) = H3HjHkLOR(1,2,i)
@@ -1418,14 +1397,14 @@ c
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)H3HjHkLOR(2,2,i)
             READ(NI,111)H3HjHkNLO(2,2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)H3HjHkLOR(2,2,1)
          READ(NI,111)H3HjHkNLO(2,2,1)
-         do i=2,17,1
+         do i=2,10,1
             H3HjHkLOR(2,2,i) = 0.D0
             H3HjHkNLO(2,2,i) = 0.D0            
          enddo
@@ -1435,14 +1414,14 @@ c     .     h3hjhklor(2,2,1)
 c            
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HAALOR(3,i)            
             READ(NI,111)HAANLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HAALOR(3,1)
          READ(NI,111)HAANLO(3,1)         
-         do i=2,17,1
+         do i=2,10,1
             HAALOR(3,i) = 0.D0
             HAANLO(3,i) = 0.D0            
          enddo
@@ -1451,14 +1430,14 @@ c      print*,'values3',haalor(3,1)
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HZALOR(3,i)            
             READ(NI,111)HZANLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HZALOR(3,1)
          READ(NI,111)HZANLO(3,1)         
-         do i=2,17,1
+         do i=2,10,1
             HZALOR(3,i) = 0.D0
             HZANLO(3,i) = 0.D0
          enddo
@@ -1467,14 +1446,14 @@ c      print*,'values4',hzalor(3,1)
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HHPWMLOR(3,i)
             READ(NI,111)HHPWMNLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HHPWMLOR(3,1)
          READ(NI,111)HHPWMNLO(3,1)         
-         do i=2,17,1
+         do i=2,10,1
             HHPWMLOR(3,i) = 0.D0
             HHPWMNLO(3,i) = 0.D0
          enddo
@@ -1483,14 +1462,14 @@ c      print*,'values5',hhpwmlor(3,1)
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HHPHMLOR(3,i)
             READ(NI,111)HHPHMNLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HHPHMLOR(3,1)
          READ(NI,111)HHPHMNLO(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HHPHMLOR(3,i) = 0.D0
             HHPHMNLO(3,i) = 0.D0
          enddo
@@ -1501,80 +1480,74 @@ c A decays
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph1n2hdmren(4,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph1n2hdmren(4,1)
-         do i=2,17,1
+         do i=2,10,1
             alph1n2hdmren(4,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph2n2hdmren(4,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph2n2hdmren(4,1)
-         do i=2,17,1
+         do i=2,10,1
             alph2n2hdmren(4,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph3n2hdmren(4,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph3n2hdmren(4,1)
-         do i=2,17,1
+         do i=2,10,1
             alph3n2hdmren(4,i) = 0.D0
          enddo
       ENDIF      
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)tmptgbet(i)
          enddo
-         do i=1,17,1
+         do i=1,10,1
             TGBETN2HDMREN(4,i)=dtan(tmptgbet(i))
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)ttmptgbet
          TGBETN2HDMREN(4,1)=dtan(ttmptgbet)
-         do i=2,17,1
+         do i=2,10,1
             TGBETN2HDMREN(4,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)vsren(4,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)vsren(4,1)
-         do i=2,17,1
+         do i=2,10,1
             vsren(4,i) = 0.D0
          enddo
       ENDIF
-      IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
-            READ(NI,111)am12ren(4,i)
+      READ(NI,111)am12ren(4,1)
+         do i=2,10,1
+            am12ren(4,i) = am12ren(4,1)
          enddo
-      ELSEIF(IRENSCHEME.NE.0) then
-         READ(NI,111)am12ren(4,1)
-         do i=2,17,1
-            AM12REN(4,i) = 0.D0
-         enddo
-      ENDIF
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)hbblor(4,i)
             READ(NI,111)hbbnlo(4,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)hbblor(4,1)         
          READ(NI,111)hbbnlo(4,1)
-         do i=2,17,1
+         do i=2,10,1
             HBBLOR(4,i) = 0.D0            
             HBBNLO(4,i) = 0.D0
          enddo
@@ -1582,14 +1555,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HLLLOR(4,i)                        
             READ(NI,111)HLLNLO(4,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HLLLOR(4,1)
          READ(NI,111)HLLNLO(4,1)
-         do i=2,17,1
+         do i=2,10,1
             HLLLOR(4,i) = 0.D0            
             HLLNLO(4,i) = 0.D0
          enddo
@@ -1597,14 +1570,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HMMLOR(4,i)
             READ(NI,111)HMMNLO(4,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HMMLOR(4,1)         
          READ(NI,111)HMMNLO(4,1)
-         do i=2,17,1
+         do i=2,10,1
             HMMLOR(4,i) = 0.D0            
             HMMNLO(4,i) = 0.D0
          enddo
@@ -1612,14 +1585,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HSSLOR(4,i)
             READ(NI,111)HSSNLO(4,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HSSLOR(4,1)
          READ(NI,111)HSSNLO(4,1)
-         do i=2,17,1
+         do i=2,10,1
             HSSLOR(4,i) = 0.D0            
             HSSNLO(4,i) = 0.D0
          enddo
@@ -1627,14 +1600,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HCCLOR(4,i)            
             READ(NI,111)HCCNLO(4,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HCCLOR(4,1)
          READ(NI,111)HCCNLO(4,1)
-         do i=2,17,1
+         do i=2,10,1
             HCCLOR(4,i) = 0.D0            
             HCCNLO(4,i) = 0.D0
          enddo
@@ -1642,14 +1615,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HTTLOR(4,i)
             READ(NI,111)HTTNLO(4,i)            
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HTTLOR(4,1)
          READ(NI,111)HTTNLO(4,1)         
-         do i=2,17,1
+         do i=2,10,1
             HTTLOR(4,i) = 0.D0
             HTTNLO(4,i) = 0.D0            
          enddo
@@ -1657,14 +1630,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HAHjZLOR(1,i)
             READ(NI,111)HAHjZNLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HAHjZLOR(1,1)
          READ(NI,111)HAHjZNLO(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HAHjZLOR(1,i) = 0.D0
             HAHjZNLO(1,i) = 0.D0
          enddo
@@ -1672,14 +1645,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HAHjZLOR(2,i)
             READ(NI,111)HAHjZNLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HAHjZLOR(2,1)
          READ(NI,111)HAHjZNLO(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HAHjZLOR(2,i) = 0.D0
             HAHjZNLO(2,i) = 0.D0
          enddo
@@ -1687,14 +1660,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HAHjZLOR(3,i)
             READ(NI,111)HAHjZNLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HAHjZLOR(3,1)
          READ(NI,111)HAHjZNLO(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HAHjZLOR(3,i) = 0.D0
             HAHjZNLO(3,i) = 0.D0
          enddo
@@ -1702,14 +1675,14 @@ c
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HAHmWpLOR(i)
             READ(NI,111)HAHmWpNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HAHmWpLOR(1)
          READ(NI,111)HAHmWpNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HAHmWpLOR(i) = 0.D0
             HAHmWpNLO(i) = 0.D0
          enddo
@@ -1719,80 +1692,74 @@ c H+ decays
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph1n2hdmren(5,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph1n2hdmren(5,1)
-         do i=2,17,1
+         do i=2,10,1
             alph1n2hdmren(5,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph2n2hdmren(5,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph2n2hdmren(5,1)
-         do i=2,17,1
+         do i=2,10,1
             alph2n2hdmren(5,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)alph3n2hdmren(5,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)alph3n2hdmren(5,1)
-         do i=2,17,1
+         do i=2,10,1
             alph3n2hdmren(5,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)tmptgbet(i)
          enddo
-         do i=1,17,1
+         do i=1,10,1
             TGBETN2HDMREN(5,i)=dtan(tmptgbet(i))
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)ttmptgbet
          TGBETN2HDMREN(5,1)=dtan(ttmptgbet)
-         do i=2,17,1
+         do i=2,10,1
             TGBETN2HDMREN(5,i) = 0.D0
          enddo
       ENDIF
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)vsren(5,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)vsren(5,1)
-         do i=2,17,1
+         do i=2,10,1
             vsren(5,i) = 0.D0
          enddo
       ENDIF            
-      IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
-            READ(NI,111)am12ren(5,i)
+      READ(NI,111)am12ren(5,1)
+         do i=2,10,1
+            am12ren(5,i) = am12ren(5,1)
          enddo
-      ELSEIF(IRENSCHEME.NE.0) then
-         READ(NI,111)am12ren(5,1)
-         do i=2,17,1
-            AM12REN(5,i) = 0.D0
-         enddo
-      ENDIF
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPBCLOR(i)
             READ(NI,111)HPBCNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPBCLOR(1)
          READ(NI,111)HPBCNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPBCLOR(i) = 0.D0
             HPBCNLO(i) = 0.D0
          enddo
@@ -1800,14 +1767,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPTAUNULOR(i)
             READ(NI,111)HPTAUNUNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPTAUNULOR(1)
          READ(NI,111)HPTAUNUNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPTAUNULOR(i) = 0.D0
             HPTAUNUNLO(i) = 0.D0
          enddo
@@ -1815,14 +1782,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPMUNULOR(i)
             READ(NI,111)HPMUNUNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPMUNULOR(1)
          READ(NI,111)HPMUNUNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPMUNULOR(i) = 0.D0
             HPMUNUNLO(i) = 0.D0
          enddo
@@ -1830,14 +1797,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPSULOR(i)
             READ(NI,111)HPSUNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPSULOR(1)
          READ(NI,111)HPSUNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPSULOR(i) = 0.D0
             HPSUNLO(i) = 0.D0
          enddo
@@ -1845,14 +1812,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPSCLOR(i)
             READ(NI,111)HPSCNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPSCLOR(1)
          READ(NI,111)HPSCNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPSCLOR(i) = 0.D0
             HPSCNLO(i) = 0.D0
          enddo
@@ -1860,14 +1827,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPTBLOR(i)
             READ(NI,111)HPTBNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPTBLOR(1)
          READ(NI,111)HPTBNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPTBLOR(i) = 0.D0
             HPTBNLO(i) = 0.D0
          enddo
@@ -1875,14 +1842,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPDCLOR(i)
             READ(NI,111)HPDCNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPDCLOR(1)
          READ(NI,111)HPDCNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPDCLOR(i) = 0.D0
             HPDCNLO(i) = 0.D0
          enddo
@@ -1890,14 +1857,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPBULOR(i)
             READ(NI,111)HPBUNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPBULOR(1)
          READ(NI,111)HPBUNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPBULOR(i) = 0.D0
             HPBUNLO(i) = 0.D0
          enddo
@@ -1905,14 +1872,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPTSLOR(i)
             READ(NI,111)HPTSNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPTSLOR(1)
          READ(NI,111)HPTSNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPTSLOR(i) = 0.D0
             HPTSNLO(i) = 0.D0
          enddo
@@ -1920,14 +1887,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPTDLOR(i)
             READ(NI,111)HPTDNLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPTDLOR(1)
          READ(NI,111)HPTDNLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPTDLOR(i) = 0.D0
             HPTDNLO(i) = 0.D0
          enddo
@@ -1935,14 +1902,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPWHjLOR(1,i)
             READ(NI,111)HPWHjNLO(1,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPWHjLOR(1,1)
          READ(NI,111)HPWHjNLO(1,1)
-         do i=2,17,1
+         do i=2,10,1
             HPWHjLOR(1,i) = 0.D0
             HPWHjNLO(1,i) = 0.D0
          enddo
@@ -1950,14 +1917,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPWHjLOR(2,i)
             READ(NI,111)HPWHjNLO(2,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPWHjLOR(2,1)
          READ(NI,111)HPWHjNLO(2,1)
-         do i=2,17,1
+         do i=2,10,1
             HPWHjLOR(2,i) = 0.D0
             HPWHjNLO(2,i) = 0.D0
          enddo
@@ -1965,14 +1932,14 @@ c
 c
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPWHjLOR(3,i)
             READ(NI,111)HPWHjNLO(3,i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPWHjLOR(3,1)
          READ(NI,111)HPWHjNLO(3,1)
-         do i=2,17,1
+         do i=2,10,1
             HPWHjLOR(3,i) = 0.D0
             HPWHjNLO(3,i) = 0.D0
          enddo
@@ -1980,14 +1947,14 @@ c
 c      
       READ(NI,*)
       IF(IRENSCHEME.EQ.0) then
-         do i=1,17,1
+         do i=1,10,1
             READ(NI,111)HPWALOR(i)
             READ(NI,111)HPWANLO(i)
          enddo
       ELSEIF(IRENSCHEME.NE.0) then
          READ(NI,111)HPWALOR(1)
          READ(NI,111)HPWANLO(1)
-         do i=2,17,1
+         do i=2,10,1
             HPWALOR(i) = 0.D0
             HPWANLO(i) = 0.D0
          enddo
@@ -4364,7 +4331,7 @@ c MMM changed 21/2/2019
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1         
+      do kk=1,10,1         
          
       if(hwdth1(1,kk).ne.0.D0) then
 
@@ -4552,7 +4519,7 @@ c MMM changed 21/2/2019
       endif
          
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       if(hwdth2(1,kk).ne.0.D0) then
 
       write(nout,105)
@@ -4966,7 +4933,7 @@ c MMM changed 21/2/2019
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1         
+      do kk=1,10,1         
          
       if(hwdth1(2,kk).ne.0.D0) then
 
@@ -5162,7 +5129,7 @@ c MMM changed 21/2/2019
       endif
          
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       if(hwdth2(2,kk).ne.0.D0) then
 
       write(nout,105)
@@ -5375,7 +5342,7 @@ c MMM changed 21/2/2019
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1         
+      do kk=1,10,1         
          
       if(hwdth1(3,kk).ne.0.D0) then
 
@@ -5587,7 +5554,7 @@ c MMM changed 21/2/2019
       endif
          
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       if(hwdth2(3,kk).ne.0.D0) then
 
       write(nout,105)
@@ -5934,7 +5901,7 @@ c MMM changed 21/2/2019
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1         
+      do kk=1,10,1         
          
       if(hwdth1(4,kk).ne.0.D0) then
 
@@ -6106,7 +6073,7 @@ c MMM changed 21/2/2019
       endif
          
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       if(hwdth2(4,kk).ne.0.D0) then
 
       write(nout,105)
@@ -6436,7 +6403,7 @@ c MMM changed 21/2/2019
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1         
+      do kk=1,10,1         
          
       if(hpwdth1(kk).ne.0.D0) then
 
@@ -6608,7 +6575,7 @@ c MMM changed 21/2/2019
       endif
          
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       if(hpwdth2(kk).ne.0.D0) then
 
       write(nout,105)
@@ -6863,7 +6830,7 @@ c --------------------- c
 c ============================================================================ c
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,112) 25,'H1 non-zero LO decay widths of on-shell and no
@@ -7009,7 +6976,7 @@ c ============================================================================ c
       endif
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,114) 25,'H1 non-zero NLO EW decay widths of on-shell an
@@ -7157,7 +7124,7 @@ c ============================================================================ c
 c ============================================================================ c
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,112) 35,'H2 non-zero LO decay widths of on-shell and no
@@ -7311,7 +7278,7 @@ c ============================================================================ c
       endif
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,114) 35,'H2 non-zero NLO EW decay widths of on-shell an
@@ -7467,7 +7434,7 @@ c ============================================================================ c
 c ============================================================================ c
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,112) 38,'H3 non-zero LO decay widths of on-shell and no
@@ -7637,7 +7604,7 @@ c ============================================================================ c
       endif
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,114) 35,'H3 non-zero NLO EW decay widths of on-shell an
@@ -7809,7 +7776,7 @@ c ============================================================================ c
 c ============================================================================ c
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,112) 36,'A non-zero LO decay widths of on-shell and non
@@ -7939,7 +7906,7 @@ c ============================================================================ c
       endif
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,114) 36,'A non-zero NLO EW decay widths of on-shell and
@@ -8071,7 +8038,7 @@ c ============================================================================ c
 c ============================================================================ c
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,112) 37,'H+ non-zero LO decay widths of on-shell and no
@@ -8225,7 +8192,7 @@ c ============================================================================ c
       endif
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
       write(nou1,105)
       write(nou1,888)
       write(nou1,114) 37,'H+ non-zero NLO EW decay widths of on-shell an
@@ -10371,7 +10338,7 @@ C  Hi ---> G G
 c MMM changed 21/2/2019       
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .               vsren(i,kk))
@@ -10400,7 +10367,7 @@ c       print*,''
 c       print*,'h decay widths'
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 hggr(i,kk)=HVV(amhi,0.D0)*(ASG/PI)**2*
      .          CDABS(CATR(i,kk)+CABR(i,kk)+CACR(i,kk))**2*FQCD/8
              end do
@@ -10429,7 +10396,7 @@ c MMM changed 21/2/2019
 c      print*,''
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 dccr(i,kk)=HVV(amhi,0.D0)*(ASG/PI)**2*
      .          CDABS(CATR(i,kk)+CABR(i,kk)+CACR(i,kk))**2*FQCD/8
      .          -hggr(i,kk)
@@ -10460,7 +10427,7 @@ c MMM changed 21/2/2019
 c       print*,''
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 dbbr(i,kk)=HVV(amhi,0.D0)*(ASG/PI)**2*
      .          CDABS(CATR(i,kk)+CABR(i,kk)+CACR(i,kk))**2*FQCD/8
      .          -hggr(i,kk)-dccr(i,kk)
@@ -10508,7 +10475,7 @@ c MMM changed 21/2/2019
 c       print*,''
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
              hggr(i,kk)=hggr(i,kk)+
      .        HVV(amhi,0.D0)*(ASG/PI)**2*
      .               CDABS(CATR(i,kk)+CABR(i,kk)+CACR(i,kk))**2*
@@ -10545,7 +10512,7 @@ c                print*,'hggr',hggr(i,1),hgg
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
          HLGGRESC = HGG*GFCALC/GF
          if(irenscheme.eq.0) then
-            do kk=1,17,1
+            do kk=1,10,1
                HGGRESCR(i,kk) = HGGR(i,kk)*GFCALC/GF
             enddo
          elseif(irenscheme.ne.0) then
@@ -10563,7 +10530,7 @@ C  H ---> MU MU
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HMMLORESC(i,kk) = 0.D0
                   HMMEW(i,kk) = 0.D0
                end do
@@ -10578,7 +10545,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))
@@ -10618,7 +10585,7 @@ C  H ---> TAU TAU
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HLLLORESC(i,kk) = 0.D0
                   HLLEW(i,kk) = 0.D0
                end do
@@ -10633,7 +10600,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))
@@ -10674,7 +10641,7 @@ C  H --> SS
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HSSLORESC(i,kk) = 0.D0
                 HSSQCD(i,kk) = 0.D0
                 HSSEW(i,kk) = 0.D0
@@ -10700,7 +10667,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))                  
@@ -10765,7 +10732,7 @@ C  H --> CC
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HCCLORESC(i,kk) = 0.D0
                 HCCQCD(i,kk) = 0.D0
                 HCCEW(i,kk) = 0.D0
@@ -10792,7 +10759,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))                  
@@ -10861,7 +10828,7 @@ C  H --> BB :
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HBBLORESC(i,kk) = 0.D0
                 HBBQCD(i,kk) = 0.D0
                 HBBEW(i,kk) = 0.D0
@@ -10890,7 +10857,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))                
@@ -10972,7 +10939,7 @@ C  H ---> TT
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then            
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HTTLORESC(i,kk) = 0.D0
                 HTTQCD(i,kk) = 0.D0
                 HTTQCDEW(i,kk) = 0.D0
@@ -10993,7 +10960,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then  
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))                        
@@ -11056,7 +11023,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019               
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then  
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))                      
@@ -11157,7 +11124,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then 
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))                      
@@ -11196,7 +11163,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      HTTLORESC(i,kk) = 0.D0
                      HTTQCD(i,kk) = 0.D0
                      HTTQCDEW(i,kk) = 0.D0
@@ -11220,7 +11187,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))                      
@@ -11292,7 +11259,7 @@ c     .      ghipm(i)
 c MMM changed 21/2/2019       
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .               vsren(i,kk))
@@ -11338,7 +11305,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019       
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 hgaresc(i,kk) = HVV(amhi,0.D0)*(ALPH/PI)**2/16.D0*
      .               GFCALC/GF*CDABS(CATR(i,kk)+CABR(i,kk)+CACR(i,kk)
      .               +CALR(i,kk)+CAWR(i,kk)+CAHR(i,kk))**2
@@ -11367,7 +11334,7 @@ C  H ---> Z GAMMA
 c MMM changed 21/2/2019       
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1            
+                do kk=1,10,1            
                    HZGARESC(i,kk) = 0.D0
                 end do
              elseif(irenscheme.ne.0) then
@@ -11408,7 +11375,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019       
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .               vsren(i,kk))
@@ -11458,7 +11425,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019       
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
          if(irenscheme.eq.0) then
-            do kk=1,17,1
+            do kk=1,10,1
                ACOUP = DSQRT(2D0)*GFCALC*AMZ**2*SS*CS/PI**2
                HZGARESC(i,kk) = GFCALC/(4.D0*PI*DSQRT(2.D0))*amhi**3*
      .    (ALPH/PI)*ACOUP/16.D0*(1-AMZ**2/amhi**2)**3*
@@ -11494,7 +11461,7 @@ c MMM changed 19/1/19
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(amhi.le.2.D0*amw) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1
+                do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11513,7 +11480,7 @@ c MMM changed 19/1/19
           elseif(amhi.gt.2.D0*amw) then
              
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11553,7 +11520,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11588,7 +11555,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .     alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11611,7 +11578,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .     alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11651,7 +11618,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1
+                do kk=1,10,1
                    HWWLORESC(i,kk) = 0.D0
                    HWWEW(i,kk) = 0.D0
                 end do
@@ -11667,7 +11634,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .     alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11700,7 +11667,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .     alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11742,7 +11709,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .     alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11796,7 +11763,7 @@ c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(amhi.le.2.D0*amz) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1
+                do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11814,7 +11781,7 @@ c MMM changed 21/2/2019
             endif             
           elseif(amhi.gt.2.D0*amz) then
            if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11858,7 +11825,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11892,7 +11859,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11915,7 +11882,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019          
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -11957,7 +11924,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do k=1,17,1
+                do k=1,10,1
                    HZZLORESC(i,kk)=0.D0
                    HZZEW(i,kk) = HZZLORESC(i,kk)
                 end do
@@ -11975,7 +11942,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -12009,7 +11976,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -12052,7 +12019,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -12103,7 +12070,7 @@ C  Hi ---> H+ W+
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      hhpwmloresc(i,kk) = 0.D0
                      hhpwmew(i,kk) = hhpwmloresc(i,kk)
                   end do
@@ -12120,7 +12087,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      hhpwmloresc(i,kk) = 0.D0
                      hhpwmew(i,kk) = hhpwmloresc(i,kk)
                   end do
@@ -12137,7 +12104,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019       
                if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                      if(irenscheme.eq.0) then
-                        do kk=1,17,1
+                        do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -12179,7 +12146,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019       
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -12235,7 +12202,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk)) 
@@ -12275,7 +12242,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      hhpwmloresc(i,kk)=0.D0
                      hhpwmew(i,kk) = hhpwmloresc(i,kk)
                   end do
@@ -12295,7 +12262,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                 vsren(i,kk))
@@ -12345,7 +12312,7 @@ c  Hi ---> A Z
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      HAZLORESC(i,kk)=0.D0
                      HAZEW(i,kk) = HAZLORESC(i,kk)
                   end do
@@ -12361,7 +12328,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      HAZLORESC(i,kk)=0.D0
                      HAZEW(i,kk) = HAZLORESC(i,kk)
                   end do
@@ -12380,7 +12347,7 @@ c end maggie changed 10/10/16
 c MMM changed 21/2/2019       
                   if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                      if(irenscheme.eq.0) then
-                        do kk=1,17,1
+                        do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                          vsren(i,kk))
@@ -12420,7 +12387,7 @@ c end maggie changed 10/10/16
 c MMM changed 21/2/2019       
                   if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                      if(irenscheme.eq.0) then
-                        do kk=1,17,1
+                        do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                          vsren(i,kk))
@@ -12479,7 +12446,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                          vsren(i,kk))
@@ -12506,7 +12473,7 @@ c MMM changed 21/2/2019
      .      (HZANLO(i,1)-HZALOR(i,1))/HZALOR(i,1))
                endif
             endif
-c end MMM changed 19/1/19     
+c end MMM changed 21/2/2019     
             
          endif
       else
@@ -12516,7 +12483,7 @@ c end MMM changed 19/1/19
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      HAZLORESC(i,kk)=0.D0
                      HAZEW(i,kk) = HAZLORESC(i,kk)
                   end do
@@ -12535,7 +12502,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                          vsren(i,kk))
@@ -12586,7 +12553,7 @@ C  Hi ---> A A
 c MMM changed 21/2/2019
                if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                   if(irenscheme.eq.0) then
-                     do kk=1,17,1
+                     do kk=1,10,1
                         HAALORESC(i,kk) = 0.D0
                         HAAEW(i,kk) = HAALORESC(i,kk)
                      end do
@@ -12609,7 +12576,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
                if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -12663,7 +12630,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
                if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -12739,7 +12706,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
          if(irenscheme.eq.0) then
-            do kk=1,17,1
+            do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -12780,7 +12747,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
                if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                   if(irenscheme.eq.0) then
-                     do kk=1,17,1
+                     do kk=1,10,1
                         HAALORESC(i,kk) = 0.D0
                         HAAEW(i,kk) = HAALORESC(i,kk)
                      end do
@@ -12797,7 +12764,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
                if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                   if(irenscheme.eq.0) then
-                     do kk=1,17,1
+                     do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -12854,7 +12821,7 @@ c      end do
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      H2HjHkLORESC(1,1,kk)=0.D0
                      H2HjHkEW(1,1,kk) = H2HjHkLORESC(1,1,kk)
                   end do
@@ -12874,7 +12841,7 @@ c            print*,'self1',ghijk(1,1,2)
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -12928,7 +12895,7 @@ c ----------------
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      H3HjHkLORESC(1,1,kk)=0.D0
                      H3HjHkEW(1,1,kk) = H3HjHkLORESC(1,1,kk)
                   end do
@@ -12946,7 +12913,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -12998,7 +12965,7 @@ c ----------------
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      H3HjHkLORESC(2,2,kk)=0.D0
                      H3HjHkEW(2,2,kk) = H3HjHkLORESC(2,2,kk)
                   end do
@@ -13016,7 +12983,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -13068,7 +13035,7 @@ c ----------------
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      H3HjHkLORESC(1,2,kk)=0.D0
                      H3HjHkEW(1,2,kk) = H3HjHkLORESC(1,2,kk)
                   end do
@@ -13087,7 +13054,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -13145,7 +13112,7 @@ C  Hi ---> H+ H-
 c MMM changed 21/2/2019         
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HHPHMLORESC(i,kk)=0.D0
                   HHPHMEW(i,kk) = HHPHMLORESC(i,kk)
                end do
@@ -13163,7 +13130,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019         
             if(i2hdm.eq.1.and.ielw2hdm.eq.0) then
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
        call N2HDMcpr_hdec(tgbetn2hdmren(i,kk),alph1n2hdmren(i,kk),
      .       alph2n2hdmren(i,kk),alph3n2hdmren(i,kk),am12ren(i,kk),
      .                vsren(i,kk))
@@ -13258,7 +13225,7 @@ c QCD corrections (where applicable) and off-shell decays, without elw
 c corrections, but rescaled by GFCALC/GF
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
 
          WTOT1(i,kk)=HGGRESCR(i,kk)+HMMLORESC(i,kk)+HLLLORESC(i,kk)
      .        +HSSQCD(i,kk)+HCCQCD(i,kk)+HBBQCD(i,kk)+HTTQCD(i,kk)
@@ -13453,7 +13420,7 @@ c QCD corrections and the EW corrections. The latter are only included for
 c on-shell decays and non-loop induced decays
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
 
          WTOT2(i,kk)=HGGRESCR(i,kk)+HMMEW(i,kk)+HLLEW(i,kk)
      .           +HSSQCDEW(i,kk)+HCCQCDEW(i,kk)+HBBQCDEW(i,kk)
@@ -13637,7 +13604,7 @@ C  H+ ---> MU NMU
 c MMM changed 21/2/2019       
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HMNLORESC(kk) = 0.D0
                 HMNEW(kk) = HMNLORESC(kk)
              end do
@@ -13652,7 +13619,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -13694,7 +13661,7 @@ C  H+ ---> TAU NTAU
 c MMM changed 21/2/2019       
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HLNLORESC(kk) = 0.D0
                 HLNEW(kk) = HLNLORESC(kk)
              end do
@@ -13709,7 +13676,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -13754,7 +13721,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HSULORESC(kk) = 0.D0
                   HSUQCD(kk) = HSULORESC(kk)
                   HSUEW(kk) = HSULORESC(kk)
@@ -13779,7 +13746,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -13839,7 +13806,7 @@ C  H+ --> CS
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HSCLORESC(kk) = 0.D0
                   HSCQCD(kk) = HSCLORESC(kk)
                   HSCEW(kk) = HSCLORESC(kk)
@@ -13864,7 +13831,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -13934,7 +13901,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HCDLORESC(kk) = 0.D0
                   HCDQCD(kk) = HCDLORESC(kk)
                   HCDEW(kk) = HCDLORESC(kk)
@@ -13959,7 +13926,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14020,7 +13987,7 @@ C  H+ --> CB
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HBCLORESC(kk) = 0.D0
                   HBCQCD(kk) = HBCLORESC(kk)
                   HBCEW(kk) = HBCLORESC(kk)
@@ -14045,7 +14012,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14109,7 +14076,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HBULORESC(kk) = 0.D0
                   HBUQCD(kk) = HBULORESC(kk)
                   HBUEW(kk) = HBULORESC(kk)
@@ -14134,7 +14101,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14205,7 +14172,7 @@ c end MMM changed 21/2/2019
 c MMM changed 10/7/18
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HDTLORESC(kk) = 0.D0
                   HDTQCD(kk) = HDTLORESC(kk)
                   HDTEW(kk) = HDTLORESC(kk)
@@ -14226,7 +14193,7 @@ c end MMM changed 10/7/18
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14285,7 +14252,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14374,7 +14341,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14429,7 +14396,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HDTLORESC(kk) = 0.D0
                   HDTQCD(kk) = HDTLORESC(kk)
                   HDTEW(kk) = HDTLORESC(kk)
@@ -14455,7 +14422,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14529,7 +14496,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HSTLORESC(kk) = 0.D0
                   HSTQCD(kk) = HSTLORESC(kk)
                   HSTEW(kk) = HSTLORESC(kk)
@@ -14550,7 +14517,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14611,7 +14578,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14702,7 +14669,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14757,7 +14724,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HSTLORESC(kk) = 0.D0
                   HSTQCD(kk) = HSTLORESC(kk)
                   HSTEW(kk) = HSTLORESC(kk)
@@ -14782,7 +14749,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14852,7 +14819,7 @@ C  H+ --> TB :
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HBTLORESC(kk) = 0.D0
                   HBTQCD(kk) = HBTLORESC(kk)
                   HBTEW(kk) = HBTLORESC(kk)
@@ -14873,7 +14840,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -14932,7 +14899,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -15023,7 +14990,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -15078,7 +15045,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HBTLORESC(kk) = 0.D0
                   HBTQCD(kk) = HBTLORESC(kk)
                   HBTEW(kk) = HBTLORESC(kk)
@@ -15104,7 +15071,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))
@@ -15175,7 +15142,7 @@ c  H+ ---> W+ Hi
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HpwhjLORESC(i,kk) = 0.D0
                   HpwhjEW(i,kk) = HpwhjLORESC(i,kk)
                end do
@@ -15191,7 +15158,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HpwhjLORESC(i,kk) = 0.D0
                   HpwhjEW(i,kk) = HpwhjLORESC(i,kk)
                end do
@@ -15208,7 +15175,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))                  
@@ -15247,7 +15214,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))                  
@@ -15303,7 +15270,7 @@ c     print*,'hallo'
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))                  
@@ -15340,7 +15307,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HpwhjLORESC(i,kk) = 0.D0
                   HpwhjEW(i,kk) = HpwhjLORESC(i,kk)
                end do
@@ -15358,7 +15325,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(5,kk),alph1n2hdmren(5,kk),
      .       alph2n2hdmren(5,kk),alph3n2hdmren(5,kk),am12ren(5,kk),
      .                 vsren(5,kk))                  
@@ -15408,7 +15375,7 @@ C  H+ ---> W A
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HWALORESC(kk) = 0.D0
                   HPWAEW(kk) = HWALORESC(kk)
                end do
@@ -15424,7 +15391,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HWALORESC(kk) = 0.D0
                   HPWAEW(kk) = HWALORESC(kk)
                end do
@@ -15441,7 +15408,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
                if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HWALORESC(kk) = HCWA*gfcalc**2/gf**2
                   HPWAEW(kk) = HWALORESC(kk)
                end do
@@ -15471,7 +15438,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                xx(1) = xm1-1d0
                xx(2) = xm1
                xx(3) = xm2
@@ -15520,7 +15487,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HWALORESC(kk) = HCWA*gfcalc/gf
                   check = (HWALORESC(kk)-HPWALOR(kk))/HWALORESC(kk)
                   if(dabs(check).ge.1.D-5) then
@@ -15547,7 +15514,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HWALORESC(kk) = 0.D0
                   HPWAEW(kk) = HWALORESC(kk)
                end do
@@ -15564,7 +15531,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HWALORESC(kk) = HCWA*gfcalc/gf
                   check = (HWALORESC(kk)-HPWALOR(kk))/HWALORESC(kk)
                   if(dabs(check).ge.1.D-5) then
@@ -15616,7 +15583,7 @@ c QCD corrections (where applicable) and off-shell decays, without elw
 c corrections, but rescaled by GFCALC/GF
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
          
       WTOT1(5,kk)= HMNLORESC(kk)+HLNLORESC(kk)+HSUQCD(kk)+HSCQCD(kk)
      .        +HCDQCD(kk)+HBCQCD(kk)+HBUQCD(kk)+HDTQCD(kk)+HSTQCD(kk)
@@ -15727,7 +15694,7 @@ c QCD corrections and the EW corrections. The latter are only included for
 c on-shell decays and non-loop induced decays
 
       if(irenscheme.eq.0) then
-         do kk=1,17,1
+         do kk=1,10,1
             WTOT2(5,kk)=HMNEW(kk)+HLNEW(kk)+HSUQCDEW(kk)+HSCQCDEW(kk)
      .             +HCDQCDEW(kk)+HBCQCDEW(kk)+HBUQCDEW(kk)
      .         +HDTQCDEW(kk)+HSTQCDEW(kk)+HBTQCDEW(kk)
@@ -15859,7 +15826,7 @@ C  A ---> G G
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -15885,7 +15852,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do i=kk,17,1
+             do i=kk,10,1
             hggr(4,kk)=gfcalc/(16.D0*PI*DSQRT(2.D0))*AMA**3*(ASG/PI)**2*
      .      CDABS(CATR(4,kk)+CABR(4,kk)+CACR(4,kk))**2*FQCD
              end do
@@ -15912,7 +15879,7 @@ C  A ---> G G* ---> G CC   TO BE ADDED TO A ---> CC
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
            dccr(4,kk)=gfcalc/(16.D0*PI*DSQRT(2.D0))*AMA**3*(ASG/PI)**2*
      .      CDABS(CATR(4,kk)+CABR(4,kk)+CACR(4,kk))**2*FQCD-hggr(4,kk)
              end do
@@ -15935,7 +15902,7 @@ C  A ---> G G* ---> G BB   TO BE ADDED TO A ---> BB
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
           dbbr(4,kk)=gfcalc/(16.D0*PI*DSQRT(2.D0))*AMA**3*(ASG/PI)**2*
      .            CDABS(CATR(4,kk)+CABR(4,kk)+CACR(4,kk))**2*FQCD  
      .            - hggr(4,kk) - dccr(4,kk)
@@ -15971,7 +15938,7 @@ C  A ---> G G: FULL NNLO CORRECTIONS TO TOP LOOPS FOR NF=5
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 hggr(4,kk)=hggr(4,kk)+
      .          gfcalc/(16.D0*PI*DSQRT(2.D0))*AMA**3*(ASG/PI)**2*
      .          CDABS(CATR(4,kk)+CABR(4,kk)+CACR(4,kk))**2*(FQCD-FQCD0)
@@ -16006,7 +15973,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
          if(irenscheme.eq.0) then
-            do kk=1,17,1
+            do kk=1,10,1
                HGGRESCR(4,kk) = HGGR(4,kk)
             enddo
          elseif(irenscheme.ne.0) then
@@ -16023,7 +15990,7 @@ C  A ---> MU MU
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HMMLORESC(4,kk) = 0.D0
                   HMMEW(4,kk) = HMMLORESC(4,kk)
                end do
@@ -16038,7 +16005,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16075,7 +16042,7 @@ C  A ---> LL
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
                   HLLLORESC(4,kk) = 0.D0
                   HLLEW(4,kk) = HLLLORESC(4,kk)
                end do
@@ -16090,7 +16057,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16127,7 +16094,7 @@ C  A --> SS
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HSSLORESC(4,kk) = 0.D0
                 HSSQCD(4,kk) = HSSLORESC(4,kk)
                 HSSEW(4,kk) = HSSLORESC(4,kk)
@@ -16154,7 +16121,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16218,7 +16185,7 @@ C A --> CC
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HCCLORESC(4,kk) = 0.D0
                 HCCQCD(4,kk) = 0.D0
                 HCCEW(4,kk) = 0.D0
@@ -16246,7 +16213,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16310,7 +16277,7 @@ C  A --> BB :
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HBBLORESC(4,kk) = 0.D0
                 HBBQCD(4,kk) = HBBLORESC(4,kk)
                 HBBEW(4,kk) = HBBLORESC(4,kk)
@@ -16338,7 +16305,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16410,7 +16377,7 @@ C  A --> TT :
 c MMM changed 21/2/2019
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1
+                do kk=1,10,1
                    HTTLORESC(4,kk) = 0.D0
                    HTTQCD(4,kk) = HTTLORESC(4,kk)
                    HTTQCDEW(4,kk) = HTTLORESC(4,kk)
@@ -16430,7 +16397,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16489,7 +16456,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019               
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16574,7 +16541,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then        
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16614,7 +16581,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1
+                do kk=1,10,1
                    HTTLORESC(4,kk) = 0.D0
                    HTTQCD(4,kk) = HTTLORESC(4,kk)
                    HTTQCDEW(4,kk) = HTTLORESC(4,kk)
@@ -16637,7 +16604,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16695,7 +16662,7 @@ C  A ---> GAMMA GAMMA
 c MMM changed 19/1/19
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16728,7 +16695,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
                 HGARESC(4,kk) = gfcalc/(32.D0*PI*DSQRT(2.D0))*AMA**3*
      .(ALPH/PI)**2*CDABS(CATR(4,kk)+CABR(4,kk)+CACR(4,kk)+CALR(4,kk))**2
              end do
@@ -16751,7 +16718,7 @@ c     print*,'xrmc,xrmb,xrmt ',xrmc,xrmb,xrmt
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1            
+                do kk=1,10,1            
                    HZGARESC(4,kk) = 0.D0
                 end do
              elseif(irenscheme.ne.0) then
@@ -16781,7 +16748,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
        if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
           if(irenscheme.eq.0) then
-             do kk=1,17,1
+             do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16820,7 +16787,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
          if(irenscheme.eq.0) then
-            do kk=1,17,1
+            do kk=1,10,1
                ACOUP = DSQRT(2D0)*gfcalc*AMZ**2*SS*CS/PI**2
                HZGARESC(4,kk) = gfcalc/(4.D0*PI*DSQRT(2.D0))*AMA**3*
      .              (ALPH/PI)*ACOUP/16.D0
@@ -16854,7 +16821,7 @@ C A ---> hi Z
 c MMM changed 21/2/2019
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1
+                do kk=1,10,1
                    HAHJZLORESC(i,kk)=0.D0
                    HAHJZEW(i,kk) = HAHJZLORESC(i,kk)
                 end do
@@ -16870,7 +16837,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1
+                do kk=1,10,1
                    HAHJZLORESC(i,kk)=0.D0
                    HAHJZEW(i,kk) = HAHJZLORESC(i,kk)
                 end do
@@ -16889,7 +16856,7 @@ c end maggie changed 10/10/16
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16931,7 +16898,7 @@ c end maggie changed 10/10/16
 c MMM changed 21/2/2019
          if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
             if(irenscheme.eq.0) then
-               do kk=1,17,1
+               do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -16989,7 +16956,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -17026,7 +16993,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
           if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
              if(irenscheme.eq.0) then
-                do kk=1,17,1
+                do kk=1,10,1
                    HAHJZLORESC(i,kk)=0.D0
                    HAHJZEW(i,kk) = HAHJZLORESC(i,kk)
                 end do
@@ -17043,7 +17010,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -17093,7 +17060,7 @@ C  A ---> W+ H-
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then               
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      HAHmWpLORESC(kk)=0.D0
                      HAHmWpEW(kk) = HAHmWpLORESC(kk)
                   end do
@@ -17109,7 +17076,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then               
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      HAHmWpLORESC(kk)=0.D0
                      HAHmWpEW(kk) = HAHmWpLORESC(kk)
                   end do
@@ -17125,7 +17092,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then               
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -17161,7 +17128,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then               
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
          call N2HDMcpr_hdec(tgbetn2hdmren(4,kk),alph1n2hdmren(4,kk),
      .       alph2n2hdmren(4,kk),alph3n2hdmren(4,kk),am12ren(4,kk),
      .                 vsren(4,kk))                  
@@ -17216,7 +17183,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then               
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
                  HAHmWpLORESC(kk)=hawphm*GFCALC/GF
               check = (HAHmWpLORESC(kk)-HAHmWpLOR(kk))/HAHmWpLORESC(kk)
                  if(dabs(check).ge.1.D-5) then
@@ -17245,7 +17212,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then               
                if(irenscheme.eq.0) then
-                  do kk=1,17,1
+                  do kk=1,10,1
                      HAHmWpLORESC(kk)=0.D0
                      HAHmWpEW(kk) = HAHmWpLORESC(kk)
                   end do
@@ -17264,7 +17231,7 @@ c end MMM changed 21/2/2019
 c MMM changed 21/2/2019
         if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then               
            if(irenscheme.eq.0) then
-              do kk=1,17,1
+              do kk=1,10,1
                  HAHmWpLORESC(kk)=hawphm*GFCALC/GF
               check = (HAHmWpLORESC(kk)-HAHmWpLOR(kk))/HAHmWpLORESC(kk)
                  if(dabs(check).ge.1.D-5) then
@@ -17321,7 +17288,7 @@ c QCD corrections (where applicable) and off-shell decays, without elw
 c corrections, but rescaled by GFCALC/GF
 
        if(irenscheme.eq.0) then
-          do kk=1,17,1
+          do kk=1,10,1
          
           WTOT1(4,kk)=HGGRESCR(4,kk)+HMMLORESC(4,kk)+HLLLORESC(4,kk)
      .            +HSSQCD(4,kk)+HCCQCD(4,kk)+HBBQCD(4,kk)+HTTQCD(4,kk)
@@ -17429,7 +17396,7 @@ c QCD corrections and the EW corrections. The latter are only included for
 c on-shell decays and non-loop induced decays
 
       if(irenscheme.eq.0) then
-      do kk=1,17,1
+      do kk=1,10,1
          WTOT2(4,kk)=HGGRESCR(4,kk)+HMMEW(4,kk)+HLLEW(4,kk)
      .        +HSSQCDEW(4,kk)+HCCQCDEW(4,kk)+HBBQCDEW(4,kk)
      .        +HTTQCDEW(4,kk)+HGARESC(4,kk)+HZGARESC(4,kk)
