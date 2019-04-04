@@ -8,11 +8,11 @@ A program for the Calculation of Electroweak One-Loop Corrections to Higgs Decay
 
 **Authors** [Marcel Krause](mailto:marcel.krause@kit.edu) and [M. Margarete Mühlleitner](mailto:margarete.muehlleitner@kit.edu)
 
-**Manual** https://arxiv.org/abs/YYMM.XXXXX
+**Manual** https://arxiv.org/abs/1904.02103
 
 **Citations** When you use this program, please acknowledge the work of our and other groups by citing the following papers:
 - The manual for ewN2HDECAY:
-  - M. Krause, M. Muhlleitner, arXiv:YYMM.XXXXX
+  - M. Krause, M. Muhlleitner, arXiv:1904.02103
 - The manuals for HDECAY and N2HDECAY:
   - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448
   - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)

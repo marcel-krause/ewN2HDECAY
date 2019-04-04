@@ -11,7 +11,7 @@
 #   Authors:    Marcel Krause (marcel.krause@kit.edu)                                                                             #
 #               Prof. Dr. M. Margarete Muehlleitner (margarete.muehlleitner@kit.edu)                                              #
 #   Version:    1.0.0                                                                                                             #
-#   Date:       03.04.2019                                                                                                        #
+#   Date:       04.04.2019                                                                                                        #
 #   Copyright:  Copyright (C) 2019, Marcel Krause and Milada Margarete Muehlleitner                                               #
 #   License:    GNU General Public License (GNU GPL-3.0-or-later)                                                                 #
 #                                                                                                                                 #
@@ -28,7 +28,7 @@
 #                                                                                                                                 #
 #   Citation:   When you use this program, please acknowledge the work of our and other groups by citing the following papers:    #
 #                   The manual for ewN2HDECAY:                                                                                    #
-#                    - M. Krause, M. Muhlleitner, arXiv:YYMM.XXXXX                                                                #
+#                    - M. Krause, M. Muhlleitner, arXiv:1904.02103 (hep-ph)                                                       #
 #                   The manuals for HDECAY and N2HDECAY:                                                                          #
 #                    - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448                     #
 #                    - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)                             #
@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
 When you use this program please cite:
 	The manual for ewN2HDECAY:
-	 - M. Krause, M. Muhlleitner, arXiv:YYMM.XXXXX
+	 - M. Krause, M. Muhlleitner, arXiv:1904.02103 (hep-ph)
 	The manuals for HDECAY and N2HDECAY:
 	 - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448
 	 - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)
@@ -284,7 +284,7 @@ Copyright 2019, Marcel Krause and Milada Margarete Muehlleitner.
 	print('''
 When you use this program please cite:
 	The manual for ewN2HDECAY:
-	 - M. Krause, M. Muhlleitner, arXiv:YYMM.XXXXX
+	 - M. Krause, M. Muhlleitner, arXiv:1904.02103 (hep-ph)
 	The manuals for HDECAY and N2HDECAY:
 	 - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448
 	 - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)
