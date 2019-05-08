@@ -9,4 +9,5 @@ LoopTools-*.tar.gz
 *.exe
 *.a
 makefile
+!N2HDECAY/makefile
 electroweakCorrections.F90

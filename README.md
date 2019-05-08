@@ -4,7 +4,7 @@ A program for the Calculation of Electroweak One-Loop Corrections to Higgs Decay
 
 ## Program information
 
-**Program** ewN2HDECAY 1.0.0
+**Program** ewN2HDECAY 1.0.1
 
 **Authors** [Marcel Krause](mailto:marcel.krause@kit.edu) and [M. Margarete Mühlleitner](mailto:margarete.muehlleitner@kit.edu)
 

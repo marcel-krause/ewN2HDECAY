@@ -10,8 +10,8 @@
 #               Two-Higgs-Doublet Model (N2HDM) Including State-of-the-Art QCD Corrections                                        #
 #   Authors:    Marcel Krause (marcel.krause@kit.edu)                                                                             #
 #               Prof. Dr. M. Margarete Muehlleitner (margarete.muehlleitner@kit.edu)                                              #
-#   Version:    1.0.0                                                                                                             #
-#   Date:       04.04.2019                                                                                                        #
+#   Version:    1.0.1                                                                                                             #
+#   Date:       08.05.2019                                                                                                        #
 #   Copyright:  Copyright (C) 2019, Marcel Krause and Milada Margarete Muehlleitner                                               #
 #   License:    GNU General Public License (GNU GPL-3.0-or-later)                                                                 #
 #                                                                                                                                 #
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 	print('''
 +---------------------------------------+
 |                                       |
-|           ewN2HDECAY 1.0.0            |
+|           ewN2HDECAY 1.0.1            |
 |                                       |
 |                             /         |
 |                            /          |
