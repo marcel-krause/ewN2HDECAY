@@ -8,10 +8,10 @@
 #                                                                                                                                 #
 #   Purpose:    A program for the calculation One-Loop Electroweak Corrections to Higgs Decays in the Next-to-Minial              #
 #               Two-Higgs-Doublet Model (N2HDM) Including State-of-the-Art QCD Corrections                                        #
-#   Authors:    Marcel Krause (marcel.krause@kit.edu)                                                                             #
+#   Authors:    Dr. Marcel Krause (marcel.krause@alumni.kit.edu)                                                                  #
 #               Prof. Dr. M. Margarete Muehlleitner (margarete.muehlleitner@kit.edu)                                              #
-#   Version:    1.0.1                                                                                                             #
-#   Date:       08.05.2019                                                                                                        #
+#   Version:    1.0.3                                                                                                             #
+#   Date:       06.12.2019                                                                                                        #
 #   Copyright:  Copyright (C) 2019, Marcel Krause and Milada Margarete Muehlleitner                                               #
 #   License:    GNU General Public License (GNU GPL-3.0-or-later)                                                                 #
 #                                                                                                                                 #
@@ -28,7 +28,7 @@
 #                                                                                                                                 #
 #   Citation:   When you use this program, please acknowledge the work of our and other groups by citing the following papers:    #
 #                   The manual for ewN2HDECAY:                                                                                    #
-#                    - M. Krause, M. Muhlleitner, arXiv:1904.02103 (hep-ph)                                                       #
+#                    - M. Krause, M. Muhlleitner, Comp. Phys. Commun. 247 (2020) 106924, arXiv:1904.02103 (hep-ph)                #
 #                   The manuals for HDECAY and N2HDECAY:                                                                          #
 #                    - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448                     #
 #                    - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)                             #
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 	print('''
 +---------------------------------------+
 |                                       |
-|           ewN2HDECAY 1.0.1            |
+|           ewN2HDECAY 1.0.3            |
 |                                       |
 |                             /         |
 |                            /          |
@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
 When you use this program please cite:
 	The manual for ewN2HDECAY:
-	 - M. Krause, M. Muhlleitner, arXiv:1904.02103 (hep-ph)
+	 - M. Krause, M. Muhlleitner, Comp. Phys. Commun. 247 (2020) 106924, arXiv:1904.02103 (hep-ph)
 	The manuals for HDECAY and N2HDECAY:
 	 - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448
 	 - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)
@@ -284,7 +284,7 @@ Copyright 2019, Marcel Krause and Milada Margarete Muehlleitner.
 	print('''
 When you use this program please cite:
 	The manual for ewN2HDECAY:
-	 - M. Krause, M. Muhlleitner, arXiv:1904.02103 (hep-ph)
+	 - M. Krause, M. Muhlleitner, Comp. Phys. Commun. 247 (2020) 106924, arXiv:1904.02103 (hep-ph)
 	The manuals for HDECAY and N2HDECAY:
 	 - A. Djouadi, J. Kalinowski, M. Spira, Comp. Phys. Commun. 108 (1998) 56, hep-ph/9704448
 	 - A. Djouadi, J. Kalinowski, M. Muhlleitner, M. Spira, arXiv:1801.09506 (hep-ph)

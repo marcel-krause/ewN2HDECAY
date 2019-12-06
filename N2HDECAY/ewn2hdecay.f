@@ -3660,7 +3660,7 @@ c ----------------------------------- c
 c MMM changed 21/2/2019
       if(in2hdm.eq.1.and.ielwn2hdm.eq.0) then
       write(nout,61) 1,'ewN2HDECAY  # decay calculator'
-      write(nout,61) 2,'1.0.0       # version number'
+      write(nout,61) 2,'1.0.3       # version number'
       endif
       if(in2hdm.ne.1) then
       write(nout,61) 1,'HDECAY      # decay calculator'
@@ -5173,7 +5173,7 @@ c MMM changed 21/2/2019
      .    )' 
       endif
       if(hibrg2(2,kk).ne.0.D0) then
-      write(nout,102) hibrg2(2,kk),2,igl,igl      ,'BR(h -> g       g    
+      write(nout,102) hibrg2(2,kk),2,igl,igl      ,'BR(H2 -> g       g    
      .    )' 
       endif
       if(hibrga2(2,kk).ne.0.D0) then
@@ -6766,7 +6766,7 @@ c ----------------------------------- c
       write(nou1,105)
       write(nou1,51) 'DCINFO','Decay Program information'
       write(nou1,61) 1,'ewN2HDECAY  # decay calculator'
-      write(nou1,61) 2,'1.0.0       # version number'
+      write(nou1,61) 2,'1.0.3       # version number'
       
 c ----------------------- c
 c The SM input parameters c
